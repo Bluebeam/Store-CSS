@@ -1,0 +1,103 @@
+/* ==========================================================================
+   #BOX
+   ========================================================================== */
+
+/**
+ * The box object simply boxes off content. Extend with cosmetic styles in the
+ * Components layer or through utility classes.
+ *
+ * 1. So we can apply the `.o-box` class to naturally-inline elements.
+ */
+
+.o-box {
+  @include clearfix();
+
+  display: block; /* [1] */
+  padding: $spacing-base;
+
+  // Remove margin on last child element. This prevents extra spacing at the
+  // bottom of the box.
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+/*
+   Padding Directional variants. Extends `o-box`.
+   ========================================================================== */
+
+// Vertical
+.o-box--y {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+// Horizontal
+.o-box--x {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+// // Left
+// .o-box--left {
+//   padding-top: 0 !important;
+//   padding-bottom: 0 !important;
+//   padding-right: 0 !important;
+// }
+//
+// // Right
+// .o-box--right {
+//   padding-top: 0 !important;
+//   padding-bottom: 0 !important;
+//   padding-left: 0 !important;
+// }
+
+/* Padding Size variants. Extends `o-box`.
+   ========================================================================== */
+
+.o-box--flush { padding: 0; }
+.o-box--tightest { padding: $spacing-smallest; }
+.o-box--tighter { padding: $spacing-smaller; }
+.o-box--tight { padding: $spacing-small; }
+.o-box--loose { padding: $spacing-large; }
+.o-box--looser { padding: $spacing-larger; }
+.o-box--loosest { padding: $spacing-largest; }
+.o-box--huge { padding: $spacing-huge; }
+
+/*
+   Responsive Variants. Extends `o-box`.
+   ========================================================================== */
+
+@include breakpointUp(small) {
+  .o-sm-box--flush { padding: 0; }
+  .o-sm-box--tightest { padding: $spacing-smallest; }
+  .o-sm-box--tighter { padding: $spacing-smaller; }
+  .o-sm-box--tight { padding: $spacing-small; }
+  .o-sm-box--loose { padding: $spacing-large; }
+  .o-sm-box--looser { padding: $spacing-larger; }
+  .o-sm-box--loosest { padding: $spacing-largest; }
+  .o-sm-box--huge { padding: $spacing-huge; }
+}
+
+@include breakpointUp(medium) {
+  .o-md-box--flush { padding: 0; }
+  .o-md-box--tightest { padding: $spacing-smallest; }
+  .o-md-box--tighter { padding: $spacing-smaller; }
+  .o-md-box--tight { padding: $spacing-small; }
+  .o-md-box--loose { padding: $spacing-large; }
+  .o-md-box--looser { padding: $spacing-larger; }
+  .o-md-box--loosest { padding: $spacing-largest; }
+  .o-md-box--huge { padding: $spacing-huge; }
+}
+
+@include breakpointUp(large) {
+  .o-lg-box--flush { padding: 0; }
+  .o-lg-box--tightest { padding: $spacing-smallest; }
+  .o-lg-box--tighter { padding: $spacing-smaller; }
+  .o-lg-box--tight { padding: $spacing-small; }
+  .o-lg-box--loose { padding: $spacing-large; }
+  .o-lg-box--looser { padding: $spacing-larger; }
+  .o-lg-box--loosest { padding: $spacing-largest; }
+  .o-lg-box--huge { padding: $spacing-huge; }
+}

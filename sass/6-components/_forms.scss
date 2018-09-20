@@ -1,0 +1,421 @@
+$padding-xs--field: em(10px);
+$padding-sm--field: em(10px) em(14px);
+$padding--field: rem(13px) rem(16px);
+$padding-lg--field: em(16px) em(20px);
+$padding-xl--field: em(20px) em(24px);
+
+/*
+   Core styles
+   ========================================================================== */
+
+.formLabel {
+  @include fontSize($fontSize-small, auto);
+  margin-bottom: rem($spacing-smaller);
+  font-weight: $fontWeight-normal;
+  letter-spacing: $letterSpacing-loose;
+  display: block;
+  cursor: pointer;
+}
+
+.formLabel.is-invalid {
+  color: $color-error;
+}
+
+.formControl {
+  display: block;
+  width: 100%;
+  background-color: $color-white;
+  box-shadow: 0 1px 0 0 $color-shadow, inset 0 1px 2px 0 $color-shadowInset;
+  border-radius: 3px;
+  // border: 1px solid;
+  // border-color: transparent;
+  color: $color-blackish;
+  border: 0;
+  padding: $padding--field;
+  font: inherit;
+  // font-family: $fontFamily-roboto;
+  font-size: em($fontSize-small);
+  // font-weight: $fontWeight-bold;
+  line-height: $lineHeight-tightest;
+  letter-spacing: $letterSpacing-loose;
+  vertical-align: middle;
+  // margin-bottom: rem($spacing-smaller);
+  transition: $transition-allFast;
+
+  &:disabled,
+  &.is-disabled {
+    opacity: .6;
+    color: $color-grayDark;
+    cursor: not-allowed;
+  }
+
+  // &.is-valid {
+  //   // background: green;
+  //   // background-image: url();
+  //   // background-position: right center;
+  //   // background-repeat: no-repeat;
+  //   border: 1px solid $color-success;
+  // }
+}
+
+// .formControl--tight {
+//   padding: $padding-sm--field;
+// }
+
+
+// .formHelper {
+//   color: #999 !important;
+//   display: block !important;
+//   // margin-top: 0.5rem !important;
+//   font-size: rem($fontSize-smaller) !important;
+// }
+
+.formControl--select {
+  background-image: url("data:image/svg+xml,<svg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2712%27%20height%3D%278%27%20viewBox%3D%270%200%20488%20285%27><path%20d%3D%27M483.11%2029.381l-24.449-24.485c-2.934-2.938-7.335-4.897-11.246-4.897-3.912%200-8.313%201.959-11.246%204.897l-192.168%20192.448-192.168-192.448c-2.934-2.938-7.335-4.897-11.246-4.897-4.401%200-8.313%201.959-11.246%204.897l-24.449%2024.485c-2.934%202.938-4.89%207.345-4.89%2011.263s1.956%208.325%204.89%2011.263l227.864%20228.196c2.934%202.938%207.335%204.897%2011.246%204.897%203.912%200%208.313-1.959%2011.246-4.897l227.864-228.196c2.934-2.938%204.89-7.345%204.89-11.263s-1.956-8.325-4.89-11.263z%27%20fill%3D%27%23000%27/></svg>") !important;
+  // background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .5em bottom .25em;
+  background-repeat: no-repeat !important;
+  background-position: calc(100% - 1rem) center !important;
+  background-size: .6875rem !important;
+  box-shadow: 0 1px 2px 0 rgba(34, 40, 52, .7), inset 0 1px 0 0 rgba(255, 255, 255, .1);
+  // padding: rem(14px) rem(16px);
+  padding-right: 2.5rem !important;
+  appearance: none;
+  outline: none;
+}
+
+.formRadio,
+.formCheck {
+  position: relative;
+  display: block;
+  margin-bottom: rem($spacing-smaller);
+  cursor: pointer;
+  padding-left: rem($spacing-base);
+
+  input {
+    position: absolute;
+    margin-top: .25rem;
+    margin-left: rem(-$spacing-base);
+  }
+}
+
+
+
+.formInline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  .formControl,
+  .formRadio,
+  .formCheck {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  .formRadio,
+  .formCheck {
+    margin-right: rem($spacing-base);
+  }
+
+}
+
+/*
+   Disabled states
+   ========================================================================== */
+
+
+
+
+// input[type=radio],
+// input[type=radio]:after,
+// input[type=checkbox],
+// input[type=checkbox]:after {
+//   border-radius: 100%;
+//   border: 1px solid;
+//   display: inline-block;
+//   text-align: center;
+// }
+//
+//
+// input[type=radio],
+// input[type=checkbox] {
+//   background-color: $color-grayLight;
+//   border-color: $color-gray;
+//   cursor: pointer;
+//   height: 25px;
+//   width: 25px;
+//   position: relative;
+//
+//   background: #FFFFFF;
+//   box-shadow: 0 1px 0 0 rgba(255,255,255,0.50), inset 0 1px 2px 0 rgba(34,40,52,0.50);
+//
+//
+// }
+//
+// input[type=radio]:checked,
+// input[type=radio]:focus,
+// input[type=checkbox]:checked,
+// input[type=checkbox]:focus {
+//   border-color: $color-gray;
+// }
+//
+// input[type=radio]:after,
+// input[type=checkbox]:after {
+//   content: "";
+//   height: 17px;
+//   width: 17px;
+//   border-color: transparent;
+//   position: absolute;
+// }
+//
+//
+//
+//
+//
+// input[type=radio]:after {
+//   top: 3px;
+//   left: 3px;
+// }
+//
+// input[type=radio]:checked:after {
+//   background-color: $color-grayDarkest;
+// }
+//
+//
+// input[type=checkbox],
+// input[type=checkbox]:after {
+//   border-radius: $borderRadius-base;
+// }
+//
+// input[type=checkbox]:after {
+//   top: 2px;
+//   left: 7px;
+// }
+//
+// input[type=checkbox]:checked:after {
+//   // background-color: $color-grayDarkest;
+//   // content: "✓";
+//   content: "";
+//
+//   /*Make it a small rectangle so the border will create an L-shape*/
+//   width: 9px;
+//   height: 17px;
+//
+//   /*Add a white border on the bottom and left, creating that 'L' */
+//   border: solid $color-grayDarkest;
+//   border-width: 0 3px 3px 0;
+//
+//   /*Rotate the L 45 degrees to turn it into a checkmark*/
+//   transform: rotate(45deg);
+// }
+
+
+
+
+//
+// /* Base for label styling */
+// [type="checkbox"]:not(:checked),
+// [type="checkbox"]:checked {
+//   position: absolute;
+//   left: -9999px;
+// }
+// [type="checkbox"]:not(:checked) + label,
+// [type="checkbox"]:checked + label {
+//   position: relative;
+//   padding-left: 25px;
+//   cursor: pointer;
+// }
+//
+// /* checkbox aspect */
+// [type="checkbox"]:not(:checked) + label:before,
+// [type="checkbox"]:checked + label:before {
+//   content: '';
+//   position: absolute;
+//   left:0; top: 2px;
+//   width: 17px; height: 17px;
+//   border: 1px solid #aaa;
+//   background: #f8f8f8;
+//   border-radius: 3px;
+//   box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+// }
+// /* checked mark aspect */
+// [type="checkbox"]:not(:checked) + label:after,
+// [type="checkbox"]:checked + label:after {
+//   content: 'x';
+//   position: absolute;
+//   top: 3px; left: 4px;
+//   font-size: 18px;
+//   line-height: 0.8;
+//   color: #09ad7e;
+//   transition: all .2s;
+// }
+// /* checked mark aspect changes */
+// [type="checkbox"]:not(:checked) + label:after {
+//   opacity: 0;
+//   transform: scale(0);
+// }
+// [type="checkbox"]:checked + label:after {
+//   opacity: 1;
+//   transform: scale(1);
+// }
+// /* disabled checkbox */
+// [type="checkbox"]:disabled:not(:checked) + label:before,
+// [type="checkbox"]:disabled:checked + label:before {
+//   box-shadow: none;
+//   border-color: #bbb;
+//   background-color: #ddd;
+// }
+// [type="checkbox"]:disabled:checked + label:after {
+//   color: #999;
+// }
+// [type="checkbox"]:disabled + label {
+//   color: #aaa;
+// }
+// /* accessibility */
+// [type="checkbox"]:checked:focus + label:before,
+// [type="checkbox"]:not(:checked):focus + label:before {
+//   border: 1px dotted blue;
+// }
+//
+// /* hover style just for information */
+// label:hover:before {
+//   border: 1px solid #4778d9!important;
+// }
+
+
+/*
+   Floating Labels
+   ========================================================================== */
+
+/* Default styling
+ * Usage:
+ *
+<label class="floatLabel">
+  <input class="floatLabel-input  formInput  u-block  u-sizeFull" id="name" name="name" type="text" placeholder="John" required>
+  <span class="floatLabel-label">Name</span>
+</label>
+
+or
+
+<div class="floatLabel">
+  <input class="floatLabel-input  formInput  u-block  u-sizeFull" id="name" name="name" type="text" placeholder="John" required>
+  <label class="floatLabel-label" for="name">Name</label>
+</div>
+
+or
+
+<div class="floatLabel  u-mb4">
+  <select class="floatLabel-select  formControl  formSelect  u-block  u-sizeFull" name="industry">
+    <option value="" selected disabled>Select Industry</option>
+    <option value="Student">Academic</option>
+    <option value="Architectural">Architecture</option>
+    <option value="Building Owners">Building Owners and Managers</option>
+    <option value="Construction">Construction</option>
+    <option value="Engineering">Engineering</option>
+    <option value="Government">Government</option>
+    <option value="Manufacturing">Manufacturing</option>
+    <option value="Oil and Gas">Oil, Gas &amp; Chemical</option>
+    <option value="Specialty Contractors">Specialty Contractors</option>
+    <option value="Other">Other</option>
+  </select>
+  <label for="industry">Industry</label>
+</div>
+ *
+ */
+
+// .floatLabel {
+//   // Container
+//   display: block;
+//   position: relative;
+//
+//   .floatLabel-label {
+//     // Focused label view
+//     position: absolute;
+//     left: rem(15px);
+//     top: rem(2px);
+//     cursor: text;
+//     font-size: 65%;
+//     opacity: .8;
+//     transition: all .2s;
+//     // font-weight: normal;
+//     color: $color-grayDark;
+//     letter-spacing: $letterSpacing-loose;
+//   }
+//
+//   // select {
+//   //   -webkit-appearance: none;
+//   //   -moz-appearance: none;
+//   //   appearance: none;
+//   // }
+//
+//   .floatLabel-input,
+//   .floatLabel-select,
+//   select {
+//     padding: em(21px) em(16px) em(5px);
+//     font-size: inherit;
+//
+//     &::-webkit-input-placeholder {
+//       opacity: 1;
+//       transition: all .2s;
+//     }
+//
+//     &:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+//       opacity: 0;
+//     }
+//
+//     // Default Label view
+//     &:placeholder-shown:not(:focus) + * {
+//       left: rem(15px);
+//       top: rem(11px);
+//       font-size: em($fontSize-small);
+//       opacity: 1;
+//     }
+//
+//     &:focus {
+//       outline: 0;
+//       // box-shadow: 0 1px 0 0 $color-shadow, inset 0 1px 3px 0 $color-shadowInset;
+//     }
+//   }
+// }
+
+
+
+// .floatLabel {
+//   position: relative;
+//   display: block;
+//
+//   input, textarea {
+//     font-size: inherit;
+//
+//     // inactive but shown label (exceptions: opacity and top)
+//     + label {
+//       position: absolute;
+//       top: rem(10px);
+//       left: rem($spacing-smaller);
+//       transition: $transition-allFast;
+//       opacity: 0;
+//       cursor: text;
+//
+//       // Some nice styling
+//       font-size: $fontSize-smallest;
+//       font-weight: 600;
+//       color: $color-grayDark;
+//       letter-spacing: $letterSpacing-loose;
+//     }
+//
+//     // THE MAGIC
+//     // as soon as we start typing, the "required" attribute will
+//     // set the state to valid and our pseudo selector will match
+//     &:valid + label,
+//     &:focus + label {
+//       opacity: 1;
+//       top: rem(-16px);
+//     }
+//
+//     // and we highlight the focused input label
+//     &:focus + label {
+//       color: $color-primary;
+//     }
+//   }
+// }

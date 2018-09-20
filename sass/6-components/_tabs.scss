@@ -1,0 +1,102 @@
+/*
+   Tabs core styles
+   ========================================================================== */
+
+// .bpTabs-button {
+//   float: left;
+//   display: block;
+//   padding: 10px 20px;
+//   text-decoration: none;
+//   border-radius: 5px 5px 0 0;
+//   background: #F9F9F9;
+//   color: #777;
+// }
+//
+// .bpTabs-button.is-active,
+// .bpTabs-button:hover {
+//   background: #DDD;
+//   color: #222;
+// }
+//
+// .bpTabs-panel {
+//   display: none;
+//   clear: both;
+//   background: #FFF;
+//   padding: 20px;
+//   // opacity: 0;
+//   // transition: all $animSpeed-basic ease-in-out;
+// }
+//
+// .bpTabs-panel.is-active {
+//   // display: inherit;
+//   // opacity: 1;
+// }
+
+// .bpTabs-nav {
+  // margin: 0;
+  // padding: 0;
+// }
+
+.bpTabs-tab,
+.bpTabs-accordionTitle {
+  border: 1px solid transparent;
+  border-top-width: 3px;
+  border-bottom-color: $color-grayDark;
+  font-family: $fontFamily-roboto;
+  font-weight: 700;
+  letter-spacing: $letterSpacing-loose;
+  transition: border-color $animSpeed-basic ease-in-out;
+
+  a {
+    @include rem(padding, $spacing-small);
+    display: block;
+    color: $color-grayDark;
+
+    &:hover { color: $color-primary; }
+  }
+
+  &.is-active {
+    border-top: 3px solid $color-primary;
+    border-left: 1px solid $color-grayDark;
+    border-right: 1px solid $color-grayDark;
+    border-bottom-color: transparent;
+
+    a { color: $color-primary; }
+  }
+}
+
+.bpTabs-accordionTitle {
+  display: none;
+  border: 1px solid $color-gray !important;
+  background-color: $color-white;
+
+  a {
+    @include rem(padding, $spacing-base);
+    display: block;
+  }
+
+  &.is-active {
+    background-color: $color-white;
+    border-bottom: 0 !important;
+  }
+}
+
+.bpTabs-panel {
+  padding: $spacing-base;
+  display: none;
+
+  &.is-active { display: block; }
+}
+
+/* Accordion responsive breakpoint */
+// @media only screen and (max-width: 768px) {
+@include breakpointDown(medium) {
+  .bpTabs-nav { display: none; }
+  .bpTabs-accordionTitle { display: block; }
+
+  .bpTabs-panel {
+    border-left: 1px solid $color-gray;
+    border-right: 1px solid $color-gray;
+    border-bottom: 1px solid $color-gray;
+  }
+}

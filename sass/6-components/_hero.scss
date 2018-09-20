@@ -1,0 +1,58 @@
+/* ==========================================================================
+ * #HERO
+ * --------------------------------------------------------------------------
+ * Hero unit
+ * ========================================================================== */
+
+/* ==========================================================================
+   Hero: core
+   ========================================================================== */
+
+.hero {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 448px;
+  // position: relative;
+
+  .o-wrapper {
+    position: relative;
+    min-height: 448px;
+
+    // @include breakpointUp(medium) {
+    //   position: absolute;
+    //   width: 467px;
+    //   height: auto;
+    // }
+  }
+}
+
+// .hero-inner {
+//   @extend %wrapper;
+// }
+
+.hero-card {
+  $_ribbonBg: rgba(17, 17, 17, .7);
+
+  position: static;
+  width: 100%;
+  height: 100%;
+  color: $color-grayLightest;
+  background-color: $_ribbonBg;
+
+  @include breakpointUp(small) {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  @include breakpointUp(medium) {
+    width: 467px;
+    height: auto;
+  }
+}
+
+
+/*
+   Hero sizing
+   ========================================================================== */

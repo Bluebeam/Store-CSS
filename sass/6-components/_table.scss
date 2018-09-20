@@ -1,0 +1,144 @@
+/* ==========================================================================
+   #TABLE
+   ========================================================================== */
+
+/*
+   Variables
+   ========================================================================== */
+
+$cellPadding-sm--table: $spacing-small !default;
+$cellPadding-xs--table: $spacing-smaller !default;
+$bgColor--table: transparent !default;
+$bgAccent--table: $color-grayLightest !default;
+$theadBgColor--table: $color-grayLight !default;
+$theadColor--table: $color-gray !default;
+$cellPadding--table: $spacing-base !default;
+$borderWidth--table: 1px !default;
+$borderColor--table: $color-grayLight !default;
+
+/*
+   Core styles
+   ========================================================================== */
+
+.table {
+  @extend %table;
+}
+
+
+.table--sm {
+  th,
+  td {
+    padding: $cellPadding-sm--table;
+  }
+}
+
+.table--xs {
+  th,
+  td {
+    padding: $cellPadding-xs--table;
+  }
+}
+
+.table--bordered {
+  border: $borderWidth--table solid $borderColor--table;
+
+  th,
+  td {
+    border: $borderWidth--table solid $borderColor--table;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $borderWidth--table);
+    }
+  }
+}
+
+.table--striped {
+  tbody tr:nth-of-type(odd) {
+    background-color: $bgAccent--table;
+  }
+}
+
+/* Equal-width table cells.
+   ========================================================================== */
+
+/**
+ * `table-layout: fixed` forces all cells within a table to occupy the same
+ * width as each other. This also has performance benefits: because the browser
+ * does not need to (re)calculate cell dimensions based on content it discovers,
+ * the table can be rendered very quickly. Further reading:
+ * https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout#Values
+ */
+
+.table--fixed {
+  table-layout: fixed;
+}
+
+/* Responsive tables
+   ========================================================================== */
+
+// Add `.table--responsive` to `.table`s and we'll make them mobile friendly by
+// enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table--responsive {
+  // display: block;
+  width: 100%;
+  overflow-x: auto;
+  // IE sucks
+  min-height: 0%; // Workaround for IE9 bug
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  // Prevent double border on horizontal scroll due to use of `display: block;`
+  &.table-bordered {
+    border: 0;
+  }
+
+  @include breakpointDown(medium) {
+    display: block;
+  }
+}
+
+// .table--reflow {
+//   thead {
+//     float: left;
+//   }
+//
+//   tbody {
+//     display: block;
+//     white-space: nowrap;
+//   }
+//
+//   th,
+//   td {
+//     border-top: $borderWidth--table solid $borderColor--table;
+//     border-left: $borderWidth--table solid $borderColor--table;
+//
+//     &:last-child {
+//       border-right: $borderWidth--table solid $borderColor--table;
+//     }
+//   }
+//
+//   thead,
+//   tbody,
+//   tfoot {
+//     &:last-child {
+//       tr:last-child th,
+//       tr:last-child td {
+//         border-bottom: $borderWidth--table solid $borderColor--table;
+//       }
+//     }
+//   }
+//
+//   tr {
+//     float: left;
+//
+//     th,
+//     td {
+//       display: block !important;
+//       border: $borderWidth--table solid $borderColor--table;
+//     }
+//   }
+// }

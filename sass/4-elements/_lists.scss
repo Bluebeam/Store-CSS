@@ -1,0 +1,41 @@
+/**
+ * Remove trailing margins from nested lists.
+ */
+
+li > {
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  list-style-position: outside;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  list-style: disc;
+
+  ul, ol {
+    // margin: rem($spacing-base) 0 rem($spacing-base) rem($spacing-large);
+    font-size: 95%;
+  }
+}
+
+ol {
+  list-style: decimal;
+
+  ol, ul {
+    // margin: rem($spacing-base) 0 rem($spacing-base) rem($spacing-large);
+    font-size: 95%;
+  }
+}
+
+dl { margin-bottom: rem($spacing-small); }
+dt { margin: rem($spacing-small) 0; }
+dd { margin-left: 0; }

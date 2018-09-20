@@ -1,0 +1,671 @@
+/* ==========================================================================
+ * .icon
+ * --------------------------------------------------------------------------
+ * Icons generated from gulp task `sprites`, pulled from /imgs/*
+ * If you add more make sure to rerun gulp task and get generated
+ * located here: /svg/
+ * ========================================================================== */
+
+.featureIcon {
+  font-size: 20px;
+}
+
+.featureIcon:before {
+  content:' ';
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url("../imgs/features/sprite.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.no-svg .featureIcon:before {
+  background-image: url("../imgs/features/sprite.png");
+}
+
+/*
+   Modifiers: Icon types (2018)
+   ========================================================================== */
+
+
+.featureIcon--3D--dark_2018:before {
+  background-position: 0em 0em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--3D--light_2018:before {
+  background-position: 0em -3.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--AutomaticFormDetection--dark_2018:before {
+  background-position: 0em -9.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--AutomaticFormDetection--light_2018:before {
+  background-position: 0em -12.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--BatchSets--dark_2018:before {
+  background-position: 0em -16em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--BatchSets--light_2018:before {
+  background-position: 0em -19.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--BatchSlipSheet--dark_2018:before {
+  background-position: 0em -22.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--BatchSlipSheet--light_2018:before {
+  background-position: 0em -25.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Capture--dark_2018:before {
+  background-position: 0em -28.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Capture--light_2018:before {
+  background-position: 0em -32em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--CompareDocuments--dark_2018:before {
+  background-position: 0em -35.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--CompareDocuments--light_2018:before {
+  background-position: 0em -38.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Customization--dark_2018:before {
+  background-position: 0em -41.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Customization--light_2018:before {
+  background-position: 0em -44.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--DMSIntegration--dark_2018:before {
+  background-position: 0em -48em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--DMSIntegration--light_2018:before {
+  background-position: 0em -51.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--DynamicFill--dark_2018:before {
+  background-position: 0em -54.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--DynamicFill--light_2018:before {
+  background-position: 0em -57.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--FileAccess--dark_2018:before {
+  background-position: 0em -60.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--FileAccess--light_2018:before {
+  background-position: 0em -64em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Legends--dark_2018:before {
+  background-position: 0em -67.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Legends--light_2018:before {
+  background-position: 0em -70.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Linked--dark_2018:before {
+  background-position: 0em -73.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Linked--light_2018:before {
+  background-position: 0em -76.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Links--dark_2018:before {
+  background-position: 0em -80em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Links--light_2018:before {
+  background-position: 0em -83.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Markups--dark_2018:before {
+  background-position: 0em -86.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Markups--light_2018:before {
+  background-position: 0em -89.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--MarkupsList--dark_2018:before {
+  background-position: 0em -92.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--MarkupsList--light_2018:before {
+  background-position: 0em -96em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Measure--dark_2018:before {
+  background-position: 0em -99.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Measure--light_2018:before {
+  background-position: 0em -102.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Multiview--dark_2018:before {
+  background-position: 0em -105.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Multiview--light_2018:before {
+  background-position: 0em -108.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--OCR--dark_2018:before {
+  background-position: 0em -112em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--OCR-light_2018:before {
+  background-position: 0em -115.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--OverlayPages--dark_2018:before {
+  background-position: 0em -118.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--OverlayPages--light_2018:before {
+  background-position: 0em -121.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--PDFCreation--dark_2018:before {
+  background-position: 0em -124.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--PDFCreation--light_2018:before {
+  background-position: 0em -128em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--PDFEditing--dark_2018:before {
+  background-position: 0em -131.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--PDFEditing--light_2018:before {
+  background-position: 0em -134.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--PDFForm--dark_2018:before {
+  background-position: 0em -137.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--PDFForm--light_2018:before {
+  background-position: 0em -140.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--PDFTemplate--dark_2018:before {
+  background-position: 0em -144em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--PDFTemplate--light_2018:before {
+  background-position: 0em -147.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Profiles--dark_2018:before {
+  background-position: 0em -150.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Profiles--light_2018:before {
+  background-position: 0em -153.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Redaction--dark_2018:before {
+  background-position: 0em -156.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Redaction--light_2018:before {
+  background-position: 0em -160em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Scripts--dark_2018:before {
+  background-position: 0em -163.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Scripts--light_2018:before {
+  background-position: 0em -166.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Security--dark_2018:before {
+  background-position: 0em -169.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Security--light_2018:before {
+  background-position: 0em -172.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Sets--dark_2018:before {
+  background-position: 0em -176em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Sets--light_2018:before {
+  background-position: 0em -179.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--SketchTools--dark_2018:before {
+  background-position: 0em -182.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--SketchTools--light_2018:before {
+  background-position: 0em -185.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Snapshot--dark_2018:before {
+  background-position: 0em -188.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Snapshot--light_2018:before {
+  background-position: 0em -192em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Stamp--dark_2018:before {
+  background-position: 0em -195.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Stamp--light_2018:before {
+  background-position: 0em -198.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Tags--dark_2018:before {
+  background-position: 0em -201.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--Tags--light_2018:before {
+  background-position: 0em -204.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--ToolChest--dark_2018:before {
+  background-position: 0em -208em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--ToolChest--light_2018:before {
+  background-position: 0em -211.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--VisualSearch--dark_2018:before {
+  background-position: 0em -214.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+.featureIcon--VisualSearch--light_2018:before {
+  background-position: 0em -217.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+/*
+   Modifiers: Icon types (2017)
+   ========================================================================== */
+
+.featureIcon--3dPdfs:before {
+  background-position: 0em -6.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+.featureIcon--batchSlipSheet:before {
+  background-position: 0em -220.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--compareDocs:before {
+  background-position: 0em -224em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--compareDocuments:before {
+  background-position: 0em -227.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--customization:before {
+  background-position: 0em -230.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--fileAccess:before {
+  background-position: 0em -233.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--integration:before {
+  background-position: 0em -236.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--legends:before {
+  background-position: 0em -240em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--markupsList:before {
+  background-position: 0em -243.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--measure:before {
+  background-position: 0em -246.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--navigate:before {
+  background-position: 0em -249.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--ocr:before {
+  background-position: 0em -252.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--overlayPages:before {
+  background-position: 0em -256em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--pdfCreation:before {
+  background-position: 0em -259.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--pdfEditing:before {
+  background-position: 0em -262.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--pdfForms:before {
+  background-position: 0em -265.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--pin:before {
+  background-position: 0em -268.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--redaction:before {
+  background-position: 0em -272em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--scripts:before {
+  background-position: 0em -275.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--search:before {
+  background-position: 0em -278.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--security:before {
+  background-position: 0em -281.6em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--sets:before {
+  background-position: 0em -284.8em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--sketchTools:before {
+  background-position: 0em -288em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--structures:before {
+  background-position: 0em -291.2em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--studio:before {
+  background-position: 0em -294.4em;
+  width: 3.2em;
+  height: 3.2em;
+}
+
+
+
+
+.featureIcon--toolChest:before {
+  background-position: 0em -297.6em;
+  width: 3.2em;
+  height: 3.2em;
+}

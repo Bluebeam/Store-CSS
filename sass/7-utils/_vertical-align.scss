@@ -1,0 +1,66 @@
+/* ==========================================================================
+   #VERTICAL-ALIGN
+   ========================================================================== */
+
+.u-alignBase { vertical-align: baseline !important; }
+.u-alignMiddle { vertical-align: middle !important; }
+.u-alignTop { vertical-align: top !important; }
+.u-alignBottom { vertical-align: bottom !important; }
+
+/**
+ * Vertical align middle that actually works on everything via translateY.
+ * http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+ */
+
+.u-alignMiddleRel {
+  @include verticalAlign(relative);
+}
+
+.u-alignMiddleAbs {
+  @include verticalAlign(absolute);
+}
+
+@include breakpointUp(small) {
+  // .u-sm-vAlignBase { vertical-align: baseline !important; }
+  // .u-sm-vAlignMiddle { vertical-align: middle !important; }
+  // .u-sm-vAlignTop { vertical-align: top !important; }
+  // .u-sm-vAlignBottom { vertical-align: bottom !important; }
+
+  .u-sm-alignMiddleRel {
+    @include verticalAlign(relative);
+  }
+
+  .u-sm-alignMiddleAbs {
+    @include verticalAlign(absolute);
+  }
+}
+
+@include breakpointUp(medium) {
+  // .u-md-vAlignBase { vertical-align: baseline !important; }
+  // .u-md-vAlignMiddle { vertical-align: middle !important; }
+  // .u-md-vAlignTop { vertical-align: top !important; }
+  // .u-md-vAlignBottom { vertical-align: bottom !important; }
+
+  .u-md-alignMiddleRel {
+    @include verticalAlign(relative);
+  }
+
+  .u-md-alignMiddleAbs {
+    @include verticalAlign(absolute);
+  }
+}
+
+@include breakpointUp(large) {
+  // .u-lg-vAlignBase { vertical-align: baseline !important; }
+  // .u-lg-vAlignMiddle { vertical-align: middle !important; }
+  // .u-lg-vAlignTop { vertical-align: top !important; }
+  // .u-lg-vAlignBottom { vertical-align: bottom !important; }
+
+  .u-lg-alignMiddleRel {
+    @include verticalAlign(relative);
+  }
+
+  .u-lg-alignMiddleAbs {
+    @include verticalAlign(absolute);
+  }
+}

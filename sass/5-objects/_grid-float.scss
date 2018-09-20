@@ -1,0 +1,246 @@
+/* ==========================================================================
+ * Grid system
+ * --------------------------------------------------------------------------
+ * A responsive grid system for controlling layouts accross the site.
+ *
+ * This ia float based version. This is here as backup in case we need to
+ * revert to this to support IE9 and below.
+ * ========================================================================== */
+
+/*
+   Settings
+   ========================================================================== */
+
+// Total number of grid columns.
+$columnsTotal--grid: 12;
+
+// left & right padding for each column.
+$columnsPadding--grid: 10px;
+
+// Max width for the grid.
+// The actual grid column full width is 1180px;
+$maxWidth--grid: 1200px;
+
+// $breakpoint--grid: 480px;
+// $breakpoint2--grid: 767px;
+// $breakpoint3--grid: 1200px;
+
+/*
+   Mixins
+   ========================================================================== */
+
+/**
+ * Creates a row for the grid. Basically just a div that centers itsself and
+ * provides a clearfix .
+ */
+
+@mixin makeRow() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @include clearfix();
+}
+
+/**
+ * Calculates a width based on the number of columns.
+ *
+ * $columns  Number  The number of columns you want the width to span (out of 12)
+ * $important  String  Set to false by default. Weather you want to pass the
+ *   `!important` flag. Pass `null` or `none` or simply omit a value to
+ *   ignore it.
+ */
+
+@mixin setWidth($columns, $important: false) {
+
+  @if ($important == "important") {
+      $important: unquote("!important");
+  } @else {
+      $important: null;
+  }
+
+  // @if $style == "float" {
+    // float: left;
+    // Calculate width based on number of columns available
+  width: percentage($columns / $columnsTotal--grid) $important;
+
+  // } @else {
+  //   display: block;
+  //   width: percentage(12 / $columnsTotal--grid) $important;
+  // }
+
+}
+
+/**
+ * Create the 'offset' columns.
+ */
+
+@mixin setWidthOffset($columns, $important: false) {
+
+  @if ($important == "important") {
+      $important: unquote("!important");
+  } @else {
+      $important: null;
+  }
+
+  @media (min-width: $breakpoint--grid) {
+    margin-left: percentage($columns / $columnsTotal--grid) $important;
+  }
+
+}
+
+/*
+   Grid classes
+   ========================================================================== */
+
+.o-grid {
+  @include makeRow();
+
+  max-width: $maxWidth--grid;
+
+  .o-grid {
+    // Negative margin the row out to align the content of columns
+    margin-left: -$columnsPadding--grid;
+    margin-right: -$columnsPadding--grid;
+  }
+}
+
+/**
+ * All direct descendant elements of the grid should have this class.
+ * You may change the size of the grid column using the span classes.
+ */
+
+.o-grid-col {
+  @include setWidth(12, important);
+
+  min-height: 1px;
+  float: none;
+  padding-left: $columnsPadding--grid;
+  padding-right: $columnsPadding--grid;
+
+  @include breakpointUp(small) {
+    float: left;
+  }
+}
+
+/**
+ * These are used for sizing the grid columns. Do not place span objects on the
+ * main `o-grid` element.
+ *
+ * Usage:
+ *
+<div class="o-grid">
+  <div class="o-grid-col  u-span6"> ... </div>
+  <div class="o-grid-col  u-span6"> ... </div>
+</div>
+ *
+ */
+
+.u-span1 { @include setWidth(1, important); }
+.u-span2 { @include setWidth(2, important); }
+.u-span3 { @include setWidth(3, important); }
+.u-span4 { @include setWidth(4, important); }
+.u-span5 { @include setWidth(5, important); }
+.u-span6 { @include setWidth(6, important); }
+.u-span7 { @include setWidth(7, important); }
+.u-span8 { @include setWidth(8, important); }
+.u-span9 { @include setWidth(9, important); }
+.u-span10 { @include setWidth(10, important); }
+.u-span11 { @include setWidth(11, important); }
+.u-span12 { @include setWidth(12, important); }
+
+.u-push1 { @include setWidthOffset(1, important); }
+.u-push2 { @include setWidthOffset(2, important); }
+.u-push3 { @include setWidthOffset(3, important); }
+.u-push4 { @include setWidthOffset(4, important); }
+.u-push5 { @include setWidthOffset(5, important); }
+.u-push6 { @include setWidthOffset(6, important); }
+.u-push7 { @include setWidthOffset(7, important); }
+.u-push8 { @include setWidthOffset(8, important); }
+.u-push9 { @include setWidthOffset(9, important); }
+.u-push10 { @include setWidthOffset(10, important); }
+.u-push11 { @include setWidthOffset(11, important); }
+.u-push12 { @include setWidthOffset(12, important); }
+
+@include breakpointUp(small) {
+  .u-sm-span1 { @include setWidth(1, important); }
+  .u-sm-span2 { @include setWidth(2, important); }
+  .u-sm-span3 { @include setWidth(3, important); }
+  .u-sm-span4 { @include setWidth(4, important); }
+  .u-sm-span5 { @include setWidth(5, important); }
+  .u-sm-span6 { @include setWidth(6, important); }
+  .u-sm-span7 { @include setWidth(7, important); }
+  .u-sm-span8 { @include setWidth(8, important); }
+  .u-sm-span9 { @include setWidth(9, important); }
+  .u-sm-span10 { @include setWidth(10, important); }
+  .u-sm-span11 { @include setWidth(11, important); }
+  .u-sm-span12 { @include setWidth(12, important); }
+
+  .u-sm-push1 { @include setWidthOffset(1, important); }
+  .u-sm-push2 { @include setWidthOffset(2, important); }
+  .u-sm-push3 { @include setWidthOffset(3, important); }
+  .u-sm-push4 { @include setWidthOffset(4, important); }
+  .u-sm-push5 { @include setWidthOffset(5, important); }
+  .u-sm-push6 { @include setWidthOffset(6, important); }
+  .u-sm-push7 { @include setWidthOffset(7, important); }
+  .u-sm-push8 { @include setWidthOffset(8, important); }
+  .u-sm-push9 { @include setWidthOffset(9, important); }
+  .u-sm-push10 { @include setWidthOffset(10, important); }
+  .u-sm-push11 { @include setWidthOffset(11, important); }
+  .u-sm-push12 { @include setWidthOffset(12, important); }
+}
+
+@include breakpointUp(medium) {
+  .u-md-span1 { @include setWidth(1, important); }
+  .u-md-span2 { @include setWidth(2, important); }
+  .u-md-span3 { @include setWidth(3, important); }
+  .u-md-span4 { @include setWidth(4, important); }
+  .u-md-span5 { @include setWidth(5, important); }
+  .u-md-span6 { @include setWidth(6, important); }
+  .u-md-span7 { @include setWidth(7, important); }
+  .u-md-span8 { @include setWidth(8, important); }
+  .u-md-span9 { @include setWidth(9, important); }
+  .u-md-span10 { @include setWidth(10, important); }
+  .u-md-span11 { @include setWidth(11, important); }
+  .u-md-span12 { @include setWidth(12, important); }
+
+  .u-md-push1 { @include setWidthOffset(1, important); }
+  .u-md-push2 { @include setWidthOffset(2, important); }
+  .u-md-push3 { @include setWidthOffset(3, important); }
+  .u-md-push4 { @include setWidthOffset(4, important); }
+  .u-md-push5 { @include setWidthOffset(5, important); }
+  .u-md-push6 { @include setWidthOffset(6, important); }
+  .u-md-push7 { @include setWidthOffset(7, important); }
+  .u-md-push8 { @include setWidthOffset(8, important); }
+  .u-md-push9 { @include setWidthOffset(9, important); }
+  .u-md-push10 { @include setWidthOffset(10, important); }
+  .u-md-push11 { @include setWidthOffset(11, important); }
+  .u-md-push12 { @include setWidthOffset(12, important); }
+}
+
+@include breakpointUp(large) {
+  .u-lg-span1 { @include setWidth(1, important); }
+  .u-lg-span2 { @include setWidth(2, important); }
+  .u-lg-span3 { @include setWidth(3, important); }
+  .u-lg-span4 { @include setWidth(4, important); }
+  .u-lg-span5 { @include setWidth(5, important); }
+  .u-lg-span6 { @include setWidth(6, important); }
+  .u-lg-span7 { @include setWidth(7, important); }
+  .u-lg-span8 { @include setWidth(8, important); }
+  .u-lg-span9 { @include setWidth(9, important); }
+  .u-lg-span10 { @include setWidth(10, important); }
+  .u-lg-span11 { @include setWidth(11, important); }
+  .u-lg-span12 { @include setWidth(12, important); }
+
+  .u-lg-push1 { @include setWidthOffset(1, important); }
+  .u-lg-push2 { @include setWidthOffset(2, important); }
+  .u-lg-push3 { @include setWidthOffset(3, important); }
+  .u-lg-push4 { @include setWidthOffset(4, important); }
+  .u-lg-push5 { @include setWidthOffset(5, important); }
+  .u-lg-push6 { @include setWidthOffset(6, important); }
+  .u-lg-push7 { @include setWidthOffset(7, important); }
+  .u-lg-push8 { @include setWidthOffset(8, important); }
+  .u-lg-push9 { @include setWidthOffset(9, important); }
+  .u-lg-push10 { @include setWidthOffset(10, important); }
+  .u-lg-push11 { @include setWidthOffset(11, important); }
+  .u-lg-push12 { @include setWidthOffset(12, important); }
+}

@@ -1,0 +1,183 @@
+/* ==========================================================================
+ * Text utility classes
+ * --------------------------------------------------------------------------
+ * Utilities applied to text elements.
+ * ========================================================================== */
+
+/**
+ * Text decoration
+ */
+
+.u-strike { text-decoration: line-through !important; }
+.u-underline { text-decoration: underline !important; }
+.u-noDeco { text-decoration: none !important; }
+
+/**
+ * Text Transform
+ */
+
+.u-caps { text-transform: capitalize !important; }
+.u-lowercase { text-transform: lowercase !important; }
+.u-allCaps { text-transform: uppercase !important; }
+.u-regular { text-transform: none !important; }
+
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.u-breakWord { word-wrap: break-word !important; }
+
+/**
+ * Horizontal text alignment
+ */
+
+.u-txtCenter { text-align: center !important; }
+.u-txtLeft { text-align: left !important; }
+.u-txtRight { text-align: right !important; }
+
+@include breakpointUp(small) {
+  .u-sm-txtCenter { text-align: center !important; }
+  .u-sm-txtLeft { text-align: left !important; }
+  .u-sm-txtRight { text-align: right !important; }
+}
+
+@include breakpointUp(medium) {
+  .u-md-txtCenter { text-align: center !important; }
+  .u-md-txtLeft { text-align: left !important; }
+  .u-md-txtRight { text-align: right !important; }
+}
+
+@include breakpointUp(large) {
+  .u-lg-txtCenter { text-align: center !important; }
+  .u-lg-txtLeft { text-align: left !important; }
+  .u-lg-txtRight { text-align: right !important; }
+}
+
+/**
+ * Inherit the ancestor's text color.
+ */
+
+.u-txtColorInherit { color: inherit !important; }
+
+/**
+ * Enables font kerning in all browsers.
+ * http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+ *
+ * 1. Chrome (not Windows), Firefox, IE 10+
+ * 2. Safari 7 and future browsers
+ * 3. Chrome (not Windows), Firefox, Safari 6+, iOS, Android
+ */
+
+// .u-txtKern {
+//   font-feature-settings: "kern" 1; /* 1 */
+//   font-kerning: normal; /* 2 */
+//   text-rendering: optimizeLegibility; /* 3 */
+// }
+
+/**
+ * Prevent whitespace wrapping
+ */
+
+.u-noWrap { white-space: nowrap !important; }
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+// .u-truncate {
+//   max-width: 100%; /* 1 */
+//   overflow: hidden !important;
+//   text-overflow: ellipsis !important;
+//   white-space: nowrap !important;
+//   word-wrap: normal !important; /* 2 */
+// }
+
+/**
+ * Font sizing
+ *
+ * Change the font size of elements.
+ */
+
+// .u-txtLarge { @include fontSize($fontSize-large, none, important); }
+// .u-txtLarger { @include fontSize($fontSize-larger, none, important); }
+// .u-txtLargest { @include fontSize($fontSize-largest, none, important); }
+// .u-txtJumbo { @include fontSize($fontSize-jumbo, none, important); }
+
+// .u-txt10 { @include fontSize($fontSize-micro, none, important); }
+// .u-txt9 { @include fontSize($fontSize-smallest, none, important); }
+// .u-txt8 { @include fontSize($fontSize-smaller, none, important); }
+// .u-txt7 { @include fontSize($fontSize-small, none, important); }
+
+.u-txtMicro { @include fontSize($fontSize-micro, auto, important); }
+.u-txtSmallest { @include fontSize($fontSize-smallest, auto, important); }
+.u-txtSmaller { @include fontSize($fontSize-smaller, auto, important); }
+.u-txtSmall { @include fontSize($fontSize-small, auto, important); }
+.u-txtLarge { @include fontSize($fontSize-large, auto, important); }
+.u-txtLarger { @include fontSize($fontSize-larger, auto, important); }
+.u-txtLargest { @include fontSize($fontSize-largest, auto, important); }
+// .u-txtJumbo { @include fontSize($fontSize-jumbo, auto, important); }
+.u-txtHuge { @include fontSize($fontSize-huge, auto, important); }
+// .u-t1, .u-txtWhoa { @include fontSize($fontSize-whoa, auto, important); }
+
+/**
+ * Font Weights
+ */
+
+.u-light { font-weight: 300 !important; }
+.u-normal { font-weight: normal !important; }
+.u-bold { font-weight: 700 !important; }
+
+.u-txtWhisper { color: $color-textWhisper !important; }
+.u-txtQuiet { color: $color-textQuiet !important; }
+.u-txtLoud { color: $color-textLoud !important; }
+
+/**
+ * Font Styles
+ */
+
+// .u-italic { font-style: italic; }
+.u-styleNormal { font-style: normal; }
+
+/**
+ * Tracking aka Letter spacing
+ */
+
+// .u-trackTightest { letter-spacing: $letterSpacing-tightest !important; }
+// .u-trackTighter { letter-spacing: $letterSpacing-tighter !important; }
+// .u-trackTight { letter-spacing: $letterSpacing-tight !important; }
+.u-trackNormal { letter-spacing: $letterSpacing-normal !important; }
+.u-trackLoose { letter-spacing: $letterSpacing-loose !important; }
+.u-trackLooser { letter-spacing: $letterSpacing-looser !important; }
+.u-trackLoosest { letter-spacing: $letterSpacing-loosest !important; }
+
+/**
+ * Leading aka line height
+ */
+
+.u-leadTightest { line-height: $lineHeight-tightest !important; }
+.u-leadTighter { line-height: $lineHeight-tighter !important; }
+.u-leadTight { line-height: $lineHeight-tight !important; }
+.u-leadNormal { line-height: $lineHeight-base !important; }
+.u-leadLoose { line-height: $lineHeight-loose !important; }
+.u-leadLooser { line-height: $lineHeight-looser !important; }
+.u-leadLoosest { line-height: $lineHeight-loosest !important; }
+
+/**
+ * Text shadows
+ */
+
+// .u-txtShadow1 { text-shadow: $boxShadow-1; }
+// .u-txtShadow2 { text-shadow: $boxShadow-2; }
+// .u-txtShadow3 { text-shadow: $boxShadow-3; }
+// .u-txtShadow4 { text-shadow: $boxShadow-4; }
+// .u-txtShadow5 { text-shadow: $boxShadow-5; }

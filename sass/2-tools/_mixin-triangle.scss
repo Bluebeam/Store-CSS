@@ -1,0 +1,59 @@
+/* ==========================================================================
+ * #TRIANGLE
+ * --------------------------------------------------------------------------
+ * Mixin to generate a CSS triangle
+ * ========================================================================== */
+
+/**
+ * Usage:
+ *
+ *  @include triangle(down, 10px, 6px, $color-grayLight);
+ */
+
+@mixin triangle($dir, $width, $height, $color) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  content: "";
+  position: absolute;
+  // display: inline-block;
+
+  @if $dir == up {
+
+    border-width: 0 $width $height;
+    border-color: transparent transparent $color;
+    margin-top: 5px;
+    margin-bottom: 0;
+
+  } @else if $dir == down {
+
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-width: $height $width 0;
+    border-color: $color transparent transparent;
+
+  } @else if $dir == left {
+
+    border-width: $width $height $width 0;
+    border-color: transparent $color transparent transparent;
+    margin-bottom: 0;
+    margin-left: 5px;
+
+  } @else if $dir == right {
+
+    border-width: $width 0 $width $height;
+    border-color: transparent transparent transparent $color;
+    margin-right: 5px;
+    margin-bottom: 0;
+
+  }
+}
+
+/**
+ * The following values are used for the tooltips, for example.
+ *
+ * @include triangle(left, 12px, 8px, $color-grayLight);
+ * @include triangle(right, 12px, 8px, $color-grayLight);
+ * @include triangle(up, 10px, 6px, $color-grayLight);
+ * @include triangle(down, 10px, 6px, $color-grayLight);
+ */

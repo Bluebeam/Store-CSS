@@ -1,0 +1,28 @@
+/* ==========================================================================
+ * #BBICONFONT
+ * --------------------------------------------------------------------------
+ * Mixin to include basic styles needed to use an icon font.
+ *
+ * Usage:
+
+&::before {
+  @include bbIconFont;
+
+  content: "\e901";
+}
+
+ * ========================================================================== */
+
+@mixin bbIconFont() {
+  // use !important to prevent issues with browser extensions that
+  // change fonts
+  font-family: "bluebeam-icons" !important;
+  // speak: none;
+  // font-style: normal;
+  // font-weight: normal;
+  // font-variant: normal;
+  // text-transform: none;
+  display: inline-block;
+  line-height: normal;
+  // line-height: 1;
+}

@@ -1,0 +1,102 @@
+/* ==========================================================================
+ * Global typography variables
+ * --------------------------------------------------------------------------
+ * These are font/text specific variables that are used throughout the
+ * project.
+ * ========================================================================== */
+
+/**
+ * Font families
+ */
+
+$fontFamily-sans: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$fontFamily-serif: "Roboto Slab", Georgia, "Times New Roman", Times, serif !default;
+$fontFamily-mono: "Courier New", monospace !default;
+$fontFamily-roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$fontFamily-openSans: $fontFamily-sans;
+$fontFamily-base: $fontFamily-openSans !default;
+// $fontFamily-icon:  !default;
+
+/**
+ * Font sizes
+ *
+ * Can't decide how to name these. Lulz.
+ */
+
+// $fontSize-xxxs: 10px !default;
+// $fontSize-xxs: 12px !default;
+// $fontSize-xs: 14px !default;
+// $fontSize-sm: 15px !default;
+// $fontSize-base: 16px !default;
+// $fontSize-lg: 18px !default;
+// $fontSize-xl: 22px !default;
+// $fontSize-xxl: 28px !default;
+// $fontSize-xxxl: 36px !default;
+
+
+// $fontSize-h1: 36px !default;
+// $fontSize-h2: 32px !default;
+// $fontSize-h3: 28px !default;
+// $fontSize-h4: 22px !default;
+// $fontSize-h5: 20px !default;
+// $fontSize-h6: 18px !default;
+
+
+// $fontSize-micro: 10px !default;
+// $fontSize-smallest: 12px !default;
+// $fontSize-smaller: 14px !default;
+// $fontSize-small: 15px !default;
+// $fontSize-base: 16px !default;
+// $fontSize-large: 18px !default;
+// $fontSize-larger: 20px !default;
+// $fontSize-largest: 22px !default;
+// $fontSize-jumbo: 28px !default;
+// $fontSize-huge: 32px !default;
+// $fontSize-whoa: 36px !default;
+
+$fontSize-huge: 38px !default;
+$fontSize-largest: 32px !default;
+$fontSize-larger: 24px !default;
+$fontSize-large: 18px !default;
+$fontSize-base: 16px !default;
+$fontSize-small: 15px !default;
+$fontSize-smaller: 14px !default;
+$fontSize-smallest: 12px !default;
+$fontSize-micro: 10px !default;
+
+/**
+ * Font weights
+ */
+
+// $fontWeight-thin: 100 !default;
+$fontWeight-light: 300 !default;
+$fontWeight-normal: 400 !default;
+$fontWeight-base: 400 !default;
+// $fontWeight-medium: 500 !default;
+$fontWeight-semiBold: 600 !default;
+$fontWeight-bold: 700 !default;
+// $fontWeight-black: 900 !default;
+
+/**
+ * Letter Spacing
+ */
+
+// $letterSpacing-tightest: -1px;
+// $letterSpacing-tighter: -.5px;
+// $letterSpacing-tight: -.05px;
+$letterSpacing-normal: 0 !default;
+$letterSpacing-loose: .3px !default;
+$letterSpacing-looser: .5px !default;
+$letterSpacing-loosest: 1.5px !default;
+
+/**
+ * Line heights
+ */
+
+$lineHeight-base: 26px !default;
+$lineHeight-tightest: ($lineHeight-base - 6) !default;
+$lineHeight-tighter: ($lineHeight-base - 4) !default;
+$lineHeight-tight: ($lineHeight-base - 2) !default;
+$lineHeight-loose: ($lineHeight-base + 2) !default;
+$lineHeight-looser: ($lineHeight-base + 4) !default;
+$lineHeight-loosest: ($lineHeight-base + 6) !default;

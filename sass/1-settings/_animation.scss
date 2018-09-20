@@ -1,0 +1,145 @@
+$transitionStyle-cubic: cubic-bezier(.25, .8, .25, 1);
+$transitionStyle-cubicBounce: cubic-bezier(.71, 1.7, .77, 1.24);
+$ease-cubic: cubic-bezier(.25, .8, .25, 1);
+$ease-cubicBounce: cubic-bezier(.71, 1.7, .77, 1.24);
+$easein-quad: cubic-bezier(.55, .085, .68, .53);
+$easeout-quad: cubic-bezier(.25, .46, .45, .94);
+$easein-back: cubic-bezier(.57, .07, .6, 1.71);
+$easeout-back: cubic-bezier(.175, .885, .32, 1.275);
+
+$animSpeed-slowest: 400ms;
+$animSpeed-slower: 350ms;
+$animSpeed-slow: 300ms;
+$animSpeed-basic: 250ms;
+$animSpeed-normal: $animSpeed-basic;
+$animSpeed-fast: 200ms;
+$animSpeed-faster: 150ms;
+$animSpeed-fastest: 100ms;
+$animSpeed-fastAndFurious: 50ms;
+
+$transition-allSlowest: all $animSpeed-slowest ease-out;
+$transition-allSlower: all $animSpeed-slower ease-out;
+$transition-allSlow: all $animSpeed-slow ease-out;
+$transition-all: all $animSpeed-basic ease-out;
+$transition-allFast: all $animSpeed-fast ease-out;
+$transition-allFaster: all $animSpeed-faster ease-out;
+$transition-allFastest: all $animSpeed-fastest ease-out;
+
+$transition-bgSlowest: background-color $animSpeed-slowest ease-in-out;
+$transition-bgSlower: background-color $animSpeed-slower ease-in-out;
+$transition-bgSlow: background-color $animSpeed-slow ease-in-out;
+$transition-bg: background-color $animSpeed-basic ease-in-out;
+$transition-bgFast: background-color $animSpeed-fast ease-in-out;
+$transition-bgFaster: background-color $animSpeed-faster ease-in-out;
+$transition-bgFastest: background-color $animSpeed-fastest ease-in-out;
+
+$transition-colorSlowest: color $animSpeed-slowest ease-in-out;
+$transition-colorSlower: color $animSpeed-slower ease-in-out;
+$transition-colorSlow: color $animSpeed-slow ease-in-out;
+$transition-color: color $animSpeed-basic ease-in-out;
+$transition-colorFast: color $animSpeed-fast ease-in-out;
+$transition-colorFaster: color $animSpeed-faster ease-in-out;
+$transition-colorFastest: color $animSpeed-fastest ease-in-out;
+
+$transition-borderColorSlowest: border-color $animSpeed-slowest ease-in-out;
+$transition-borderColorSlower: border-color $animSpeed-slower ease-in-out;
+$transition-borderColorSlow: border-color $animSpeed-slow ease-in-out;
+$transition-borderColor: border-color $animSpeed-basic ease-in-out;
+$transition-borderColorFast: border-color $animSpeed-fast ease-in-out;
+$transition-borderColorFaster: border-color $animSpeed-faster ease-in-out;
+$transition-borderColorFastest: border-color $animSpeed-fastest ease-in-out;
+
+$transition-opacitySlowest: opacity $animSpeed-slowest ease-in;
+$transition-opacitySlower: opacity $animSpeed-slower ease-in;
+$transition-opacitySlow: opacity $animSpeed-slow ease-in;
+$transition-opacity: opacity $animSpeed-basic ease-in;
+$transition-opacityFast: opacity $animSpeed-fast ease-in;
+$transition-opacityFaster: opacity $animSpeed-faster ease-in;
+$transition-opacityFastest: opacity $animSpeed-fastest ease-in;
+
+
+
+//
+//
+// //----   timing  ----//
+// $class-slug: t !default;
+//
+// @for $i from 1 through 7 {
+//   .#{$class-slug}-#{$i} {
+//     animation-duration: .8 - (.1s * $i);
+//   }
+// }
+//
+// //----   ease  ----//
+//
+//
+// .entrance {
+//   animation-timing-function: $easeout-quad;
+// }
+//
+// .entrance-emphasis {
+//   animation-timing-function: $easeout-back;
+// }
+//
+// .exit {
+//   animation-timing-function: $easein-quad;
+// }
+//
+// .exit-emphasis {
+//   animation-timing-function: $easein-back;
+// }
+//
+// //----   fill mode extend ---//
+// // we probably want this so we'll create a class that can be @extended as a
+// // default into our animations
+//
+// %anim-fillBoth {
+//   animation-fill-mode: both;
+// }
+//
+// //animations
+// @keyframes pop {
+//   0% {
+//     transform: scale(.9) translateZ(0);
+//   }
+//
+//   100% {
+//     transform: scale(1) translateZ(0);
+//   }
+// }
+//
+// .anim-pop {
+//   @extend %anim-fillBoth;
+//
+//   animation-name: pop;
+// }
+//
+// @keyframes unpop {
+//   0% {
+//     transform: scale(1) translateZ(0);
+//   }
+//
+//   100% {
+//     transform: scale(.9) translateZ(0);
+//   }
+// }
+//
+// .anim-unpop {
+//   @extend %anim-fillBoth;
+//
+//   animation-name: unpop;
+// }
+//
+
+
+// ***************** DEPRICATED: DO NOT USE ********************************** /
+// TODO: Remove/replace all instances of these classes in Bluprnt.
+// $animTransitionStyle-cubic: cubic-bezier(.25, .8, .25, 1);
+// $animTransition-slowest: all $animSpeed-slowest linear;
+// $animTransition-slower: all $animSpeed-slower linear;
+// $animTransition-slow: all $animSpeed-slow linear;
+// $animTransition-basic: all $animSpeed-basic linear;
+// $animTransition-fast: all $animSpeed-fast linear;
+// $animTransition-faster: all $animSpeed-faster linear;
+// $animTransition-fastest: all $animSpeed-fastest linear;
+// ***************** END: DEPRICATED ***************************************** /

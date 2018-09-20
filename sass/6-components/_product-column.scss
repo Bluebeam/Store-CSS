@@ -1,0 +1,46 @@
+.productColumn {
+  background-color: $color-white;
+}
+
+.productColumn-tab {
+  background-color: $color-grayDark;
+  position: relative;
+  cursor: pointer;
+
+  &:first-child {
+    border-top-left-radius: $borderRadius-base;
+    border-bottom-left-radius: $borderRadius-base;
+  }
+
+  &:last-child {
+    border-top-right-radius: $borderRadius-base;
+    border-bottom-right-radius: $borderRadius-base;
+  }
+
+  &.is-active {
+    background-color: $color-grayDarkest;
+
+    &:before {
+      @include triangle(down, 6px, 7px, $color-blackish);
+
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, 0);
+    }
+
+  }
+
+}
+
+.productColumn-tabPane {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+
+}
+
+@include breakpointUp(medium) {
+  .productColumn-tabPane { display: block; }
+}

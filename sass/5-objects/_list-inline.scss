@@ -1,0 +1,18 @@
+/* ==========================================================================
+   #LIST-INLINE
+   ========================================================================== */
+
+/**
+ * The list-inline object simply displays a list of items in one line.
+ */
+
+.o-listInline {
+  margin-left: 0;
+  list-style: none;
+}
+
+// @include breakpointUp(medium) {
+.o-listInline-item {
+  display: inline-block;
+}
+// }

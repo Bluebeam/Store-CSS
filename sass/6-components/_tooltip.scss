@@ -1,0 +1,270 @@
+/* ==========================================================================
+ * #TOOLTIP
+ * --------------------------------------------------------------------------
+ * Pure CSS tooltips.
+ * Adapted from: Balloon.css
+ * ========================================================================== */
+
+/* ==========================================================================
+   Tooltip: core
+   ========================================================================== */
+
+button[data-tooltip] {
+  overflow: visible;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+  opacity: 0;
+  pointer-events: none;
+  bottom: 100%;
+  left: 50%;
+  position: absolute;
+  z-index: $zIndex-9;
+  transform: translate(-50%, 10px);
+  transform-origin: top;
+  transition: opacity $animSpeed-basic ease-in-out,
+		// visibility $animSpeed-slow ease-in-out,
+		transform $animSpeed-basic $transitionStyle-cubicBounce;
+  // transform: translate3d(0, 0, 0);
+}
+
+// [data-tooltip]:before {
+//
+// }
+
+/**
+ * Tooltip window
+ */
+
+[data-tooltip]:after {
+  @include rem(font-size, $fontSize-smaller);
+
+  background: $color-grayLight;
+  // background: linear-gradient(to bottom, $color-grayLightest 0%, $color-grayLight 100%);
+  border-color: $color-grayLight;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: $borderRadius-base;
+  color: $color-blackish;
+  content: attr(data-tooltip);
+  padding: $spacing-small;
+  white-space: nowrap;
+  margin-bottom: $spacing-small;
+  // box-shadow: $boxShadow-1;
+}
+
+[data-tooltip]:before {
+  @include triangle(down, 12px, 8px, $color-grayLight);
+
+  content: "";
+  margin-bottom: 5px;
+}
+
+[data-tooltip]:focus:before,
+[data-tooltip]:hover:before,
+[data-tooltip][data-tooltip-visible]:before,
+[data-tooltip]:focus:after,
+[data-tooltip]:hover:after,
+[data-tooltip][data-tooltip-visible]:after {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+// [data-tooltip].font-awesome:after {
+//   font-family: FontAwesome;
+// }
+
+// [data-tooltip][data-tooltip-break]:after {
+//   white-space: normal;
+// }
+
+/*
+   Tooltip position: bottom
+   ========================================================================== */
+
+[data-tooltip-pos="bottom"]:before,
+[data-tooltip-pos="bottom"]:after {
+  bottom: auto;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -10px);
+}
+
+[data-tooltip-pos="bottom"]:after {
+  margin-top: $spacing-small;
+
+  background: $color-grayLight;
+  // background: linear-gradient(to top, $color-grayLightest 0%, $color-grayLight 100%);
+}
+
+[data-tooltip-pos="bottom"]:before {
+  @include triangle(up, 12px, 8px, $color-grayLight);
+}
+
+[data-tooltip-pos="bottom"]:focus:before,
+[data-tooltip-pos="bottom"]:hover:before,
+[data-tooltip-pos="bottom"][data-tooltip-visible]:before,
+[data-tooltip-pos="bottom"]:focus:after,
+[data-tooltip-pos="bottom"]:hover:after,
+[data-tooltip-pos="bottom"][data-tooltip-visible]:after {
+  transform: translate(-50%, 0);
+}
+
+/*
+   Tooltip position: Left
+   ========================================================================== */
+
+[data-tooltip-pos="left"]:before,
+[data-tooltip-pos="left"]:after {
+  bottom: auto;
+  left: auto;
+  right: 100%;
+  top: 50%;
+  transform: translate(10px, -50%);
+}
+
+[data-tooltip-pos="left"]:after {
+  margin-right: $spacing-small;
+
+  background: $color-grayLight;
+  // background: linear-gradient(to right, $color-grayLightest 0%, $color-grayLight 100%);
+}
+
+[data-tooltip-pos="left"]:before {
+  @include triangle(right, 12px, 8px, $color-grayLight);
+}
+
+[data-tooltip-pos="left"]:focus:before,
+[data-tooltip-pos="left"]:hover:before,
+[data-tooltip-pos="left"][data-tooltip-visible]:before,
+[data-tooltip-pos="left"]:focus:after,
+[data-tooltip-pos="left"]:hover:after,
+[data-tooltip-pos="left"][data-tooltip-visible]:after {
+  transform: translate(0, -50%);
+}
+
+/*
+   Tooltip position: right
+   ========================================================================== */
+
+[data-tooltip-pos="right"]:before,
+[data-tooltip-pos="right"]:after {
+  bottom: auto;
+  left: 100%;
+  top: 50%;
+  transform: translate(-10px, -50%);
+}
+
+[data-tooltip-pos="right"]:after {
+  margin-left: $spacing-small;
+
+  background: $color-grayLight;
+  // background: linear-gradient(to left, $color-grayLightest 0%, $color-grayLight 100%);
+}
+
+[data-tooltip-pos="right"]:before {
+  @include triangle(left, 12px, 8px, $color-grayLight);
+}
+
+[data-tooltip-pos="right"]:focus:before,
+[data-tooltip-pos="right"]:hover:before,
+[data-tooltip-pos="right"][data-tooltip-visible]:before,
+[data-tooltip-pos="right"]:focus:after,
+[data-tooltip-pos="right"]:hover:after,
+[data-tooltip-pos="right"][data-tooltip-visible]:after {
+  transform: translate(0, -50%);
+}
+
+/*
+   Tooltip sizing
+   ========================================================================== */
+
+[data-tooltip-size]:after {
+  white-space: normal;
+}
+
+[data-tooltip-size="small"]:after {
+  width: 80px;
+}
+
+[data-tooltip-size="medium"]:after {
+  width: 150px;
+}
+
+[data-tooltip-size="large"]:after {
+  width: 260px;
+}
+
+[data-tooltip-size="xlarge"]:after {
+  width: 90vw;
+}
+
+@media screen and (min-width: 768px) {
+  [data-tooltip-size="xlarge"]:after {
+    width: 380px;
+  }
+}
+
+[data-tooltip-size="fit"]:after {
+  width: 100%;
+}
+
+/*
+   Tooltip theme: Dark
+   ========================================================================== */
+
+[data-tooltip-theme="dark"]:after {
+  background: $color-grayDarkest !important;
+  border-color: $color-grayDarkest;
+  color: $color-grayLightest;
+  // box-shadow: $boxShadow-1;
+}
+
+[data-tooltip-theme="dark"]:before {
+  @include triangle(down, 10px, 6px, $color-grayDarkest);
+}
+
+[data-tooltip-theme="dark"][data-tooltip-pos="bottom"]:before {
+  @include triangle(up, 10px, 6px, $color-grayDarkest);
+}
+
+[data-tooltip-theme="dark"][data-tooltip-pos="left"]:before {
+  @include triangle(right, 12px, 8px, $color-grayDarkest);
+}
+
+[data-tooltip-theme="dark"][data-tooltip-pos="right"]:before {
+  @include triangle(left, 12px, 8px, $color-grayDarkest);
+}
+
+/*
+   Tooltip theme: Light
+   ========================================================================== */
+
+[data-tooltip-theme="light"]:after {
+  background-color: $color-grayLight;
+  border-color: $color-grayLight;
+  color: $color-blackish;
+  // box-shadow: $boxShadow-1;
+}
+
+[data-tooltip-theme="light"]:before {
+  @include triangle(down, 10px, 6px, $color-grayLight);
+}
+
+[data-tooltip-theme="light"][data-tooltip-pos="bottom"]:before {
+  @include triangle(up, 10px, 6px, $color-grayLight);
+}
+
+[data-tooltip-theme="light"][data-tooltip-pos="left"]:before {
+  @include triangle(right, 12px, 8px, $color-grayLight);
+}
+
+[data-tooltip-theme="light"][data-tooltip-pos="right"]:before {
+  @include triangle(left, 12px, 8px, $color-grayLight);
+}

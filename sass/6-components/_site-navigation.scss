@@ -1,0 +1,247 @@
+/* ==========================================================================
+ * #SITE-NAVIGATION
+ * --------------------------------------------------------------------------
+ * Site Navigation
+ *
+ * Contains:
+ *  Nav Items
+ *  Search
+ * ========================================================================== */
+
+.navigationToggle {
+  position: absolute;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color-grayDark;
+  border-radius: $borderRadius-base;
+  text-align: center;
+
+  .icon-bar {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 1px;
+    transition: all .3s ease;
+    background-color: $color-white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+
+    &.icon-bar:nth-child(1) {
+      margin-top: 7px;
+    }
+
+  }
+
+  &:focus,
+  &:hover {
+    background-color: #141414;
+  }
+
+  &.is-open {
+    background-color: #333;
+
+    .icon-bar:nth-child(1) {
+      transform: rotate(-45deg);
+      position: relative;
+      top: 6px;
+    }
+
+    .icon-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .icon-bar:nth-child(3) {
+      transform: rotate(45deg);
+      position: relative;
+      top: -6px;
+    }
+
+  }
+
+}
+
+.navigation {
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  .navigation-wrapper {
+
+    @include breakpointUp(large) {
+      max-width: 1200px;
+      margin: 0 auto;
+      @include clearfix();
+    }
+
+  }
+
+  @include breakpointUp(large) {
+    display: block !important;
+    position: relative;
+  }
+
+  .o-grid-cell {
+
+    @include breakpointUp(large) {
+      text-align: center;
+    }
+
+    &:last-child {
+
+      .navigation-item {
+        border-bottom: none;
+      }
+
+    }
+
+  }
+
+  .navigation-item {
+    border-bottom: 1px solid $color-grayDark;
+    position: relative;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.navigation-item--wide {
+      position: static;
+
+      @include breakpointUp(large) {
+
+        .dropdown {
+          width: 100%;
+        }
+
+      }
+
+
+    }
+
+    @include breakpointUp(large) {
+      border-bottom: none;
+      float: left;
+      cursor: pointer;
+
+      .dropdown {
+        width: 180%;
+      }
+
+    }
+
+    > span {
+
+      &.is-open {
+
+        .icon {
+          transform: rotate(90deg);
+
+          @include breakpointUp(large) {
+            transform: rotate(-90deg);
+          }
+
+        }
+
+      }
+
+    }
+
+    .icon {
+      margin-top: - rem(5px);
+      transition: $transition-all;
+
+      @include breakpointUp(large) {
+        //display: none;
+        transform: rotate(90deg);
+        margin-top: - rem(5px);
+        margin-left: rem(1px);
+      }
+
+    }
+
+
+    .dropdown {
+      display: none;
+
+      @include breakpointUp(large) {
+        position: absolute;
+        left: 0;
+        background-color: $color-grayDarkest;
+      }
+
+      .o-grid-cell {
+
+        &:first-child {
+          border-top: 1px solid $color-grayDark;
+          padding-top: rem(20px);
+          @include breakpointUp(large) {
+            border-top: none;
+          }
+        }
+
+        padding-left: rem(30px);
+        padding-right: rem(30px);
+
+        @include breakpointUp(large) {
+          border-top: none;
+          padding: 0;
+          text-align: left;
+          padding: rem($spacing-base);
+        }
+
+      }
+
+      h2 {
+        margin-bottom: rem(5px);
+        color: $color-grayLightest;
+      }
+
+      a {
+        color: $color-grayLightest;
+      }
+
+      ul {
+        margin-left: - rem(7px);
+        //padding-left: rem(30px);
+        //padding-right: rem(30px);
+
+        li {
+
+          a {
+            padding: rem(2px) rem(7px);
+
+            &:hover {
+              background-color: $color-blue;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .navigation-item-link,
+    > span {
+      display: block;
+      padding: rem($spacing-base);
+      color: $color-grayLightest;
+      transition: $transition-all;
+      @include breakpointUp(large) {
+        border-top: 1px solid $color-grayDarkest;
+
+        &:hover,
+        &.is-open {
+          border-color: $color-blue;
+        }
+
+      }
+    }
+
+  }
+
+}

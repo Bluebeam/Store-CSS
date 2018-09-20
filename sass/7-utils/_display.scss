@@ -1,0 +1,164 @@
+/* ==========================================================================
+ * #DISPLAY
+ * --------------------------------------------------------------------------
+ * Display utilities.
+ *
+ * u-block - Display block.
+ * u-hidden - Display none.
+ * u-hiddenVisually - Visually hidden but available to screenreaders.
+ * u-inline - Display inline.
+ * u-inlineBlock - Display inline-block.
+ * u-table - Display table.
+ * u-tableCell - Display table-cell.
+ * u-tableRow - Display table-row.
+ * ========================================================================== */
+
+.u-block { display: block !important; }
+.u-hidden { display: none !important; }
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+.u-hiddenVisually {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+.u-inline { display: inline !important; }
+
+/**
+ * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+ * inline-block will display at its default size, and not limit its width to
+ * 100% of an ancestral container.
+ */
+
+.u-inlineBlock {
+  display: inline-block !important;
+  max-width: 100%; /* 1 */
+}
+
+.u-inherit { display: inherit !important; }
+
+.u-table { display: table !important; }
+.u-tableCell { display: table-cell !important; }
+.u-tableRow { display: table-row !important; }
+
+
+/* ==========================================================================
+   Responsive Visibility
+   ========================================================================== */
+
+/*
+   Between
+   ========================================================================== */
+
+@include breakpointBetween(0, small) {
+  .u-hide { display: none !important; }
+  .u-show { display: inherit !important; }
+}
+
+@include breakpointBetween(small, medium) {
+  .u-sm-hide { display: none !important; }
+  .u-sm-show { display: inherit !important; }
+  .u-sm-block { display: block !important; }
+  .u-sm-inline { display: inline !important; }
+  .u-sm-inlineBlock { display: inline-block !important; }
+  .u-sm-table { display: table !important; }
+  .u-sm-tableCell { display: table-cell !important; }
+  .u-sm-tableRow { display: table-row !important; }
+}
+
+@include breakpointBetween(medium, large) {
+  .u-md-hide { display: none !important; }
+  .u-md-show { display: inherit !important; }
+  .u-md-block { display: block !important; }
+  .u-md-inline { display: inline !important; }
+  .u-md-inlineBlock { display: inline-block !important; }
+  .u-md-table { display: table !important; }
+  .u-md-tableCell { display: table-cell !important; }
+  .u-md-tableRow { display: table-row !important; }
+}
+
+// And up
+
+@include breakpointUp(small) {
+  .u-sm-up-hide { display: none !important; }
+  .u-sm-up-show { display: inherit !important; }
+  .u-sm-up-block { display: block !important; }
+  .u-sm-up-inline { display: inline !important; }
+  .u-sm-up-inlineBlock { display: inline-block !important; }
+  .u-sm-up-table { display: table !important; }
+  .u-sm-up-tableCell { display: table-cell !important; }
+  .u-sm-up-tableRow { display: table-row !important; }
+}
+
+@include breakpointUp(medium) {
+  .u-md-up-hide { display: none !important; }
+  .u-md-up-show { display: inherit !important; }
+  .u-md-up-block { display: block !important; }
+  .u-md-up-inline { display: inline !important; }
+  .u-md-up-inlineBlock { display: inline-block !important; }
+  .u-md-up-table { display: table !important; }
+  .u-md-up-tableCell { display: table-cell !important; }
+  .u-md-up-tableRow { display: table-row !important; }
+}
+
+@include breakpointUp(large) {
+  .u-lg-hide { display: none !important; }
+  .u-lg-show { display: none !important; }
+  .u-lg-block { display: block !important; }
+  .u-lg-inline { display: inline !important; }
+  .u-lg-inlineBlock { display: inline-block !important; }
+  .u-lg-table { display: table !important; }
+  .u-lg-tableCell { display: table-cell !important; }
+  .u-lg-tableRow { display: table-row !important; }
+
+  .u-lg-up-show { display: inherit !important; }
+  .u-lg-up-block { display: block !important; }
+  .u-lg-up-inline { display: inline !important; }
+  .u-lg-up-inlineBlock { display: inline-block !important; }
+  .u-lg-up-table { display: table !important; }
+  .u-lg-up-tableCell { display: table-cell !important; }
+  .u-lg-up-tableRow { display: table-row !important; }
+}
+
+// And Down
+
+@include breakpointDown(small) {
+  .u-sm-down-hide { display: none !important; }
+  .u-sm-down-show { display: inherit !important; }
+  .u-sm-down-block { display: block !important; }
+  .u-sm-down-inline { display: inline !important; }
+  .u-sm-down-inlineBlock { display: inline-block !important; }
+  .u-sm-down-table { display: table !important; }
+  .u-sm-down-tableCell { display: table-cell !important; }
+  .u-sm-down-tableRow { display: table-row !important; }
+}
+
+@include breakpointDown(medium) {
+  .u-md-down-hide { display: none !important; }
+  .u-md-down-show { display: inherit !important; }
+  .u-md-down-block { display: block !important; }
+  .u-md-down-inline { display: inline !important; }
+  .u-md-down-inlineBlock { display: inline-block !important; }
+  .u-md-down-table { display: table !important; }
+  .u-md-down-tableCell { display: table-cell !important; }
+  .u-md-down-tableRow { display: table-row !important; }
+}
+
+@include breakpointDown(large) {
+  .u-lg-down-hide { display: none !important; }
+  .u-lg-down-show { display: inherit !important; }
+  .u-lg-down-block { display: block !important; }
+  .u-lg-down-inline { display: inline !important; }
+  .u-lg-down-inlineBlock { display: inline-block !important; }
+  .u-lg-down-table { display: table !important; }
+  .u-lg-down-tableCell { display: table-cell !important; }
+  .u-lg-down-tableRow { display: table-row !important; }
+}

@@ -1,0 +1,31 @@
+/**
+ * Shared declarations for certain elements.
+ */
+
+/**
+ * Where `margin-bottom` is concerned,this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+
+/* stylelint-disable selector-list-comma-newline-after */
+
+address,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, ol, ul,
+figure,
+hr,
+table,
+fieldset {
+  @include rem(margin-bottom, $spacing-base);
+}
+
+
+/**
+ * Consistent indentation for lists.
+ */
+
+dd, ol, ul {
+  @include rem(margin-left, $spacing-base);
+}

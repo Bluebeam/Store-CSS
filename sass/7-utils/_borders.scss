@@ -1,0 +1,99 @@
+/* ==========================================================================
+ * #BORDERS
+ * --------------------------------------------------------------------------
+ * Border utilities
+ * ========================================================================== */
+
+.u-borderAll { border-style: solid !important; border-width: 1px !important; }
+.u-borderTop { border-top-style: solid !important; border-top-width: 1px !important; }
+.u-borderRight { border-right-style: solid !important; border-right-width: 1px !important; }
+.u-borderBottom { border-bottom-style: solid !important; border-bottom-width: 1px !important; }
+.u-borderLeft { border-left-style: solid !important; border-left-width: 1px !important; }
+
+.u-borderDotted { border-style: dotted !important; }
+.u-borderDashed { border-style: dashed !important; }
+.u-borderSolid {  border-style: solid !important; }
+
+.u-borderTrans { border-color: transparent !important; }
+
+.u-borderPrimary, .u-hoverBorderPrimary:hover { border-color: $color-blue !important; }
+.u-borderPrimaryLight, .u-hoverBorderPrimaryLight:hover { border-color: $color-blueLight !important; }
+.u-borderPrimaryDark, .u-hoverBorderPrimaryDark:hover { border-color: $color-blueDark !important; }
+// .u-borderSecondary, .u-hoverBorderSecondary:hover { border-color: $color-green !important; }
+// .u-borderSecondaryLight, .u-hoverBorderSecondaryLight:hover { border-color: $color-greenLight !important; }
+// .u-borderSecondaryDark, .u-hoverBorderSecondaryDark:hover { border-color: $color-greenDark !important; }
+
+.u-borderWhite { border-color: $color-white !important; }
+.u-borderGray, .u-hoverBorderGray:hover { border-color: $color-gray !important; }
+.u-borderGrayLightest, .u-hoverBorderGrayLightest:hover { border-color: $color-grayLightest !important; }
+.u-borderGrayLighter, .u-hoverBorderGrayLighter:hover { border-color: $color-grayLighter !important; }
+.u-borderGrayLight, .u-hoverBorderGrayLight:hover { border-color: $color-grayLight !important; }
+.u-borderGrayDark, .u-hoverBorderGrayDark:hover { border-color: $color-grayDark !important; }
+.u-borderGrayDarker, .u-hoverBorderGrayDarker:hover { border-color: $color-grayDarker !important; }
+.u-borderGrayDarkest, .u-hoverBorderGrayDarkest:hover { border-color: $color-grayDarkest !important; }
+.u-borderBlackish, .u-hoverBorderBlackish:hover { border-color: $color-blackish !important; }
+.u-borderBlack { border-color: $color-black !important; }
+
+.u-borderSuccess { border-color: $color-success !important; }
+// .u-borderInfo { border-color: $color-info !important; }
+// .u-borderWarning { border-color: $color-warning !important; }
+.u-borderError { border-color: $color-error !important; }
+
+// Accent colors
+
+.u-borderAccentPurple { border-color: $color-accent-purple !important; }
+.u-borderBlue1 { border-color: $color-blue1 !important; }
+.u-borderBlue2 { border-color: $color-blue2 !important; }
+.u-borderBlue3 { border-color: $color-blue3 !important; }
+.u-borderBlue4 { border-color: $color-blue4 !important; }
+.u-borderBlue5 { border-color: $color-blue5 !important; }
+.u-borderBlue6 { border-color: $color-blue6 !important; }
+.u-borderBlue7 { border-color: $color-blue7 !important; }
+.u-borderBlue8 { border-color: $color-blue8 !important; }
+.u-borderBlue9 { border-color: $color-blue9 !important; }
+.u-borderBlue10 { border-color: $color-blue10 !important; }
+.u-borderBlue11 { border-color: $color-blue11 !important; }
+
+/**
+ * Border thickness
+ */
+
+.u-border0 { border-style: none !important; border-width: 0 !important; }
+.u-border1 { border-width: 1px !important; }
+.u-border2 { border-width: 2px !important; }
+.u-border3 { border-width: 3px !important; }
+.u-border4 { border-width: 4px !important; }
+.u-border5 { border-width: 5px !important; }
+
+// .u-radius0 { border-radius: 0 !important; }
+// .u-radius1 { @include rem(border-radius, $borderRadius-base, important); }
+// .u-radius2 { @include rem(border-radius, $borderRadius-lg, important); }
+// .u-radius3 { @include rem(border-radius, $borderRadius-xl, important); }
+// .u-radius4 { @include rem(border-radius, $borderRadius-xxl, important); }
+// .u-radius5 { @include rem(border-radius, $borderRadius-xxxl, important); }
+
+// Combine `.radius100` with a fixed height and width to make a circle
+.u-radius100 { border-radius: 100%; }
+.u-radius { @include rem(border-radius, $borderRadius-base, important); }
+
+// .u-radius-pill {    border-radius: 9999px; }
+
+// .u-radius--bottom {
+//   border-top-left-radius: 0;
+//   border-top-right-radius: 0;
+// }
+//
+// .u-radius--top {
+//   border-bottom-left-radius: 0;
+//   border-bottom-right-radius: 0;
+// }
+//
+// .u-radius--right {
+//   border-top-left-radius: 0;
+//   border-bottom-left-radius: 0;
+// }
+//
+// .u-radius--left {
+//   border-top-right-radius: 0;
+//   border-bottom-right-radius: 0;
+// }

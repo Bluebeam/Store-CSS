@@ -1,0 +1,77 @@
+/* ==========================================================================
+ * #UNIT-CONVERSION
+ * --------------------------------------------------------------------------
+ * Mixins for converting units.
+ * ========================================================================== */
+
+/* ==========================================================================
+   Em units
+   ========================================================================== */
+
+/**
+* Mixin to create a declaration whose value is a em unit.
+*
+* Usage:
+.selector {
+  @include em(padding, 10px);
+}
+*/
+
+@mixin em($property, $value, $important: false) {
+  @if ($important == "important") {
+      $important: unquote("!important");
+  } @else {
+    $important: null;
+  }
+
+  @if (type-of($value) == number) {
+    @if (unit($value) != "px") {
+      @error "`#{$value}` needs to be a pixel value.";
+    }
+  } @else {
+    @error "`#{$value}` needs to be a number.";
+  }
+
+  @if ($supportOldIE) {
+    #{$property}: $value $important;
+  }
+
+  #{$property}: em($value) $important;
+}
+
+/* ==========================================================================
+   Rem units
+   ========================================================================== */
+
+/**
+ * Mixin to create a declaration whose value is a rem unit. Also provide pixel
+ * fallback.
+ *
+ * Usage:
+.selector {
+  @include rem(padding, 10px);
+}
+ */
+
+@mixin rem($property, $value, $important: false) {
+  @if ($important == "important") {
+    $important: unquote("!important");
+  } @else {
+    $important: null;
+  }
+
+  @if (type-of($value) == number) {
+    @if (unit($value) != "px") {
+      @error "`#{$value}` needs to be a pixel value.";
+    }
+  } @else {
+    @error "`#{$value}` needs to be a number.";
+  }
+
+  // We provide a `px` fallback for old IEs.
+  @if ($supportOldIE) {
+    #{$property}: $value $important;
+  }
+
+  #{$property}: rem($value) $important;
+}

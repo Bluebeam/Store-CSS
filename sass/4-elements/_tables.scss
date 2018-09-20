@@ -1,0 +1,60 @@
+$cellPadding--table:            $spacing-base !default;
+$borderWidth--table:            1px !default;
+$borderColor--table:            $color-grayLight !default;
+
+
+%table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $spacing-base;
+
+  th,
+  td {
+    padding: $cellPadding--table;
+    vertical-align: top;
+    // border-top: $borderWidth--table solid $borderColor--table;
+    text-align: left;
+    // border: $borderWidth--table solid $borderColor--table;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    // border-bottom: (2 * $borderWidth--table) solid $borderColor--table;
+  }
+
+  // tbody + tbody {
+    // border-top: (2 * $borderWidth--table) solid $borderColor--table;
+  // }
+}
+
+
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $spacing-base;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  th,
+  td {
+    vertical-align: top;
+    // border-top: $borderWidth--table solid $borderColor--table;
+    text-align: left;
+    // border: $borderWidth--table solid $borderColor--table;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    // border-bottom: (2 * $borderWidth--table) solid $borderColor--table;
+  }
+
+  // th:first-child,
+  // td:first-child {
+  //
+  // }
+  //
+  // th:last-child,
+  // td:last-child {
+  //
+  // }
+}

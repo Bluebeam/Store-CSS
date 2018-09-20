@@ -1,0 +1,81 @@
+/* ==========================================================================
+ * #SITE-HEADER
+ * --------------------------------------------------------------------------
+ * Site header
+ *
+ * Contains:
+ *  Logo
+ *  Country dropdown
+ *  Shopping cart button
+ * ========================================================================== */
+
+.bluebeamLogo {
+
+  @include breakpointBetween(small, medium) {
+    width: 152px;
+  }
+
+  &.bluebeamLogo--mobile {
+    width: 30px;
+  }
+
+  path,
+  polygon {
+    fill: $color-white;
+  }
+
+  .bluebeamBug {
+
+    path,
+    polygon {
+      transition: fill .3s ease;
+    }
+
+  }
+
+  .bluebeamName {
+    transition: transform .3s ease, opacity .3s ease;
+    path,
+    polygon {
+      transition: fill .3s ease;
+    }
+  }
+
+  .bluebeamNoLimits {
+    transition: transform .3s ease, opacity .3s ease;
+    transform: translateX(60px) translateY(24px);
+    opacity: 0;
+  }
+
+  &:hover {
+
+    .bluebeamBug {
+
+      path,
+      polygon {
+        fill: $color-primary;
+      }
+
+    }
+
+    //.bluebeamName {
+      //transform: translateY(-10px);
+      //opacity: 0;
+      //path,
+      //polygon {
+        //fill: $color-primary;
+      //}
+    //}
+    //
+    //.bluebeamNoLimits {
+    //  opacity: 1;
+    //  transform: translateX(60px) translateY(9px);
+    //  path,
+    //  polygon {
+    //    fill: $color-grayDark;
+    //  }
+    //}
+
+  }
+
+}

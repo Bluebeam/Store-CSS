@@ -1,0 +1,79 @@
+/** ==========================================================================
+ * Typography
+ * --------------------------------------------------------------------------
+ * Global default type styles.
+ * ========================================================================== */
+
+$fontSize-h1: $fontSize-huge !default;
+$fontSize-h2: $fontSize-largest !default;
+$fontSize-h3: $fontSize-larger !default;
+$fontSize-h4: $fontSize-large !default;
+$fontSize-h5: $fontSize-base !default;
+$fontSize-h6: $fontSize-small !default;
+$fontFamily-headings: $fontFamily-roboto !default;
+
+/*
+   Headings
+   ========================================================================== */
+
+/**
+ * Classes are used here for convence sake. This should be the only place in
+ * /elements that contains classes.
+ */
+
+h1, h2, h3,
+h4, h5, h6,
+.u-h1, .u-h2, .u-h3,
+.u-h4, .u-h5, .u-h6,
+.heading {
+  font-family: $fontFamily-headings;
+  font-weight: $fontWeight-bold;
+  // line-height: rem($lineHeight-base);
+  // margin: rem($lineHeight-base) 0;
+}
+
+h1, .u-h1 {
+  @include fontSize($fontSize-h1, auto);
+  margin-top: 0;
+}
+
+h2, .u-h2 {
+  @include fontSize($fontSize-h2, auto);
+  font-weight: $fontWeight-light;
+  // line-height: lineHeight(38px, $fontSize-h2);
+}
+
+h3, .u-h3 {
+  @include fontSize($fontSize-h3, auto);
+
+  // This may need to be extracted to a helper class.
+  text-transform: uppercase;
+  letter-spacing: rem($letterSpacing-loosest);
+  @include rem(margin-bottom, $spacing-small);
+}
+
+h4, .u-h4 {
+  @include fontSize($fontSize-h4, auto);
+  letter-spacing: rem($letterSpacing-looser);
+  @include rem(margin-bottom, $spacing-small);
+}
+
+h5, .u-h5 {
+  @include fontSize($fontSize-h5, auto);
+  letter-spacing: rem($letterSpacing-loose);
+  @include rem(margin-bottom, $spacing-small);
+}
+
+h6, .u-h6 {
+  @include fontSize($fontSize-h6, auto);
+  letter-spacing: rem($letterSpacing-loose);
+  @include rem(margin-bottom, $spacing-small);
+}
+
+/*
+   Paragraphs
+   ========================================================================== */
+
+// p {
+//   // margin-bottom: 1.3em;
+// }

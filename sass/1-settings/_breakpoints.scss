@@ -1,0 +1,44 @@
+/* ==========================================================================
+ * #BREAKPOINTS
+ * --------------------------------------------------------------------------
+ * These variables are used for media query breakpoints.
+ * The breakpoint mixin uses these here: /bluprnt/sass/tools/breakpoint.scss
+ * ========================================================================== */
+
+$breakpoints: (
+  smallest: 0,
+  // smaller: 0px,
+  small: 360px,
+  medium: 600px,
+  // medium: 640px,
+  // medium: 992px,
+  large: 840px,
+  // large: 960px,
+  // large: 1200px,
+  // large: 1440px,
+  larger: 1280px,
+  largest: 1920px
+);
+
+
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px
+//
+//
+//   /* Larger than mobile */
+// @media (min-width: 400px) {}
+//
+// /* Larger than phablet (also point when grid becomes active) */
+// @media (min-width: 550px) {}
+//
+// /* Larger than tablet */
+// @media (min-width: 750px) {}
+//
+// /* Larger than desktop */
+// @media (min-width: 1000px) {}
+//
+// /* Larger than Desktop HD */
+// @media (min-width: 1200px) {}

@@ -1,0 +1,49 @@
+/* ==========================================================================
+ * #BGSIZE
+ * --------------------------------------------------------------------------
+ * Background size utilities. Often used in combination with background image
+ * set as an inline style on an html element.
+ * ========================================================================== */
+
+.u-bgCover,
+.u-bgContain {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/**
+ * .u-bgCover will make sure the entire element is covered - but won't
+ * guarantee that the entire image will be shown.
+ */
+
+.u-bgCover {
+  background-size: cover !important;
+}
+
+/**
+ * .u-bgContain will make sure that the entire image is displayed within the
+ * element, regardless of the elements dimensions.
+ */
+
+.u-bgContain {
+  background-size: contain !important;
+}
+
+/*
+   Responsive classes
+   ========================================================================== */
+
+// @include breakpointUp(small) {
+//   .u-sm-bgCover { background-size: cover !important; }
+//   .u-sm-bgContain { background-size: contain !important; }
+// }
+//
+// @include breakpointUp(medium) {
+//   .u-md-bgCover { background-size: cover !important; }
+//   .u-md-bgContain { background-size: contain !important; }
+// }
+//
+// @include breakpointUp(large) {
+//   .u-lg-bgCover { background-size: cover !important; }
+//   .u-lg-bgContain { background-size: contain !important; }
+// }

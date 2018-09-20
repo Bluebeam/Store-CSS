@@ -1,0 +1,29 @@
+html {
+  // font-size: 75%;
+  // font-size: 81.3%;
+  font-size: 87.5%;
+
+  @include breakpointUp(small) {
+    font-size: 93.8%;
+  }
+
+  @include breakpointUp(large) {
+    font-size: 100%;
+  }
+}
+
+body {
+  @include rem(font-size, $fontSize-base);
+  font-family: $fontFamily-base;
+  // font-size: ($fontSize-base / 16px) * 1em;
+  line-height: $lineHeight-base / $fontSize-base;
+  // padding: $spacing-base;
+  background-color: $color-bodyBackground;
+  color: $color-bodyText;
+  // letter-spacing: em(.1px);
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-rendering: optimizeLegibility;
+}

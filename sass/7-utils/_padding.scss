@@ -1,0 +1,333 @@
+/* ==========================================================================
+ * #MARGIN
+ * --------------------------------------------------------------------------
+ * Positioning utility classes.
+ *
+ * u-posAbsolute - Absolutely position an element.
+ * u-posAbsoluteCenter - Absolutely position and center an element.
+ * u-posFit - Fit an element to the dimensions of its parent
+ * u-posFullScreen - Fixes an element over the viewport
+ * u-posFixed - Fixed position an element.
+ * u-posFixedCenter - Fix an element in the center of the viewport
+ * u-posRelative - Relatively position an element.
+ * u-posStatic - Static position an element.
+ * u-posMiddle - Vertically center an element.
+ * ========================================================================== */
+
+
+
+.u-p0  { padding: 0; }
+.u-pt0 { padding-top: 0; }
+.u-pr0 { padding-right: 0; }
+.u-pb0 { padding-bottom: 0; }
+.u-pl0 { padding-left: 0; }
+.u-px0 { padding-left: 0; padding-right: 0; }
+.u-py0 { padding-top: 0; padding-bottom: 0; }
+
+.u-p1  { padding: rem($spacing-smallest); }
+.u-pt1 { padding-top: rem($spacing-smallest); }
+.u-pr1 { padding-right: rem($spacing-smallest); }
+.u-pb1 { padding-bottom: rem($spacing-smallest); }
+.u-pl1 { padding-left: rem($spacing-smallest); }
+.u-px1 { padding-left: rem($spacing-smallest); padding-right: rem($spacing-smallest); }
+.u-py1 { padding-top: rem($spacing-smallest); padding-bottom: rem($spacing-smallest); }
+
+.u-p2  { padding: rem($spacing-smaller); }
+.u-pt2 { padding-top: rem($spacing-smaller); }
+.u-pr2 { padding-right: rem($spacing-smaller); }
+.u-pb2 { padding-bottom: rem($spacing-smaller); }
+.u-pl2 { padding-left: rem($spacing-smaller); }
+.u-px2 { padding-left: rem($spacing-smaller); padding-right: rem($spacing-smaller); }
+.u-py2 { padding-top: rem($spacing-smaller); padding-bottom: rem($spacing-smaller); }
+
+.u-p3  { padding: rem($spacing-small); }
+.u-pt3 { padding-top: rem($spacing-small); }
+.u-pr3 { padding-right: rem($spacing-small); }
+.u-pb3 { padding-bottom: rem($spacing-small); }
+.u-pl3 { padding-left: rem($spacing-small); }
+.u-px3 { padding-left: rem($spacing-small); padding-right: rem($spacing-small); }
+.u-py3 { padding-top: rem($spacing-small); padding-bottom: rem($spacing-small); }
+
+.u-p4  { padding: rem($spacing-base); }
+.u-pt4 { padding-top: rem($spacing-base); }
+.u-pr4 { padding-right: rem($spacing-base); }
+.u-pb4 { padding-bottom: rem($spacing-base); }
+.u-pl4 { padding-left: rem($spacing-base); }
+.u-px4 { padding-left: rem($spacing-base); padding-right: rem($spacing-base); }
+.u-py4 { padding-top: rem($spacing-base); padding-bottom: rem($spacing-base); }
+
+.u-p5  { padding: rem($spacing-large); }
+.u-pt5 { padding-top: rem($spacing-large); }
+.u-pr5 { padding-right: rem($spacing-large); }
+.u-pb5 { padding-bottom: rem($spacing-large); }
+.u-pl5 { padding-left: rem($spacing-large); }
+.u-px5 { padding-left: rem($spacing-large); padding-right: rem($spacing-large); }
+.u-py5 { padding-top: rem($spacing-large); padding-bottom: rem($spacing-large); }
+
+.u-p6  { padding: rem($spacing-larger); }
+.u-pt6 { padding-top: rem($spacing-larger); }
+.u-pr6 { padding-right: rem($spacing-larger); }
+.u-pb6 { padding-bottom: rem($spacing-larger); }
+.u-pl6 { padding-left: rem($spacing-larger); }
+.u-px6 { padding-left: rem($spacing-larger); padding-right: rem($spacing-larger); }
+.u-py6 { padding-top: rem($spacing-larger); padding-bottom: rem($spacing-larger); }
+
+.u-p7  { padding: rem($spacing-largest); }
+.u-pt7 { padding-top: rem($spacing-largest); }
+.u-pr7 { padding-right: rem($spacing-largest); }
+.u-pb7 { padding-bottom: rem($spacing-largest); }
+.u-pl7 { padding-left: rem($spacing-largest); }
+.u-px7 { padding-left: rem($spacing-largest); padding-right: rem($spacing-largest); }
+.u-py7 { padding-top: rem($spacing-largest); padding-bottom: rem($spacing-largest); }
+
+.u-p8  { padding: rem($spacing-huge); }
+.u-pt8 { padding-top: rem($spacing-huge); }
+.u-pr8 { padding-right: rem($spacing-huge); }
+.u-pb8 { padding-bottom: rem($spacing-huge); }
+.u-pl8 { padding-left: rem($spacing-huge); }
+.u-px8 { padding-left: rem($spacing-huge); padding-right: rem($spacing-huge); }
+.u-py8 { padding-top: rem($spacing-huge); padding-bottom: rem($spacing-huge); }
+
+/* ==========================================================================
+   Responsive classes
+   ========================================================================== */
+
+$responsivePadding: true;
+
+@if $responsivePadding == true {
+
+/*
+   Small breakpoint
+   ========================================================================== */
+
+@include breakpointUp(small) {
+  .u-sm-p0  { padding: 0; }
+  .u-sm-pt0 { padding-top: 0; }
+  .u-sm-pr0 { padding-right: 0; }
+  .u-sm-pb0 { padding-bottom: 0; }
+  .u-sm-pl0 { padding-left: 0; }
+  .u-sm-px0 { padding-left: 0; padding-right: 0; }
+  .u-sm-py0 { padding-top: 0; padding-bottom: 0; }
+
+  .u-sm-p1  { padding: rem($spacing-smallest); }
+  .u-sm-pt1 { padding-top: rem($spacing-smallest); }
+  .u-sm-pr1 { padding-right: rem($spacing-smallest); }
+  .u-sm-pb1 { padding-bottom: rem($spacing-smallest); }
+  .u-sm-pl1 { padding-left: rem($spacing-smallest); }
+  .u-sm-px1 { padding-left: rem($spacing-smallest); padding-right: rem($spacing-smallest); }
+  .u-sm-py1 { padding-top: rem($spacing-smallest); padding-bottom: rem($spacing-smallest); }
+
+  .u-sm-p2  { padding: rem($spacing-smaller); }
+  .u-sm-pt2 { padding-top: rem($spacing-smaller); }
+  .u-sm-pr2 { padding-right: rem($spacing-smaller); }
+  .u-sm-pb2 { padding-bottom: rem($spacing-smaller); }
+  .u-sm-pl2 { padding-left: rem($spacing-smaller); }
+  .u-sm-px2 { padding-left: rem($spacing-smaller); padding-right: rem($spacing-smaller); }
+  .u-sm-py2 { padding-top: rem($spacing-smaller); padding-bottom: rem($spacing-smaller); }
+
+  .u-sm-p3  { padding: rem($spacing-small); }
+  .u-sm-pt3 { padding-top: rem($spacing-small); }
+  .u-sm-pr3 { padding-right: rem($spacing-small); }
+  .u-sm-pb3 { padding-bottom: rem($spacing-small); }
+  .u-sm-pl3 { padding-left: rem($spacing-small); }
+  .u-sm-px3 { padding-left: rem($spacing-small); padding-right: rem($spacing-small); }
+  .u-sm-py3 { padding-top: rem($spacing-small); padding-bottom: rem($spacing-small); }
+
+  .u-sm-p4  { padding: rem($spacing-base); }
+  .u-sm-pt4 { padding-top: rem($spacing-base); }
+  .u-sm-pr4 { padding-right: rem($spacing-base); }
+  .u-sm-pb4 { padding-bottom: rem($spacing-base); }
+  .u-sm-pl4 { padding-left: rem($spacing-base); }
+  .u-sm-px4 { padding-left: rem($spacing-base); padding-right: rem($spacing-base); }
+  .u-sm-py4 { padding-top: rem($spacing-base); padding-bottom: rem($spacing-base); }
+
+  .u-sm-p5  { padding: rem($spacing-large); }
+  .u-sm-pt5 { padding-top: rem($spacing-large); }
+  .u-sm-pr5 { padding-right: rem($spacing-large); }
+  .u-sm-pb5 { padding-bottom: rem($spacing-large); }
+  .u-sm-pl5 { padding-left: rem($spacing-large); }
+  .u-sm-px5 { padding-left: rem($spacing-large); padding-right: rem($spacing-large); }
+  .u-sm-py5 { padding-top: rem($spacing-large); padding-bottom: rem($spacing-large); }
+
+  .u-sm-p6  { padding: rem($spacing-larger); }
+  .u-sm-pt6 { padding-top: rem($spacing-larger); }
+  .u-sm-pr6 { padding-right: rem($spacing-larger); }
+  .u-sm-pb6 { padding-bottom: rem($spacing-larger); }
+  .u-sm-pl6 { padding-left: rem($spacing-larger); }
+  .u-sm-px6 { padding-left: rem($spacing-larger); padding-right: rem($spacing-larger); }
+  .u-sm-py6 { padding-top: rem($spacing-larger); padding-bottom: rem($spacing-larger); }
+
+  .u-sm-p7  { padding: rem($spacing-largest); }
+  .u-sm-pt7 { padding-top: rem($spacing-largest); }
+  .u-sm-pr7 { padding-right: rem($spacing-largest); }
+  .u-sm-pb7 { padding-bottom: rem($spacing-largest); }
+  .u-sm-pl7 { padding-left: rem($spacing-largest); }
+  .u-sm-px7 { padding-left: rem($spacing-largest); padding-right: rem($spacing-largest); }
+  .u-sm-py7 { padding-top: rem($spacing-largest); padding-bottom: rem($spacing-largest); }
+
+  .u-sm-p8  { padding: rem($spacing-huge); }
+  .u-sm-pt8 { padding-top: rem($spacing-huge); }
+  .u-sm-pr8 { padding-right: rem($spacing-huge); }
+  .u-sm-pb8 { padding-bottom: rem($spacing-huge); }
+  .u-sm-pl8 { padding-left: rem($spacing-huge); }
+  .u-sm-px8 { padding-left: rem($spacing-huge); padding-right: rem($spacing-huge); }
+  .u-sm-py8 { padding-top: rem($spacing-huge); padding-bottom: rem($spacing-huge); }
+}
+
+/*
+   Medium breakpoint
+   ========================================================================== */
+
+@include breakpointUp(medium) {
+  .u-md-p0  { padding: 0; }
+  .u-md-pt0 { padding-top: 0; }
+  .u-md-pr0 { padding-right: 0; }
+  .u-md-pb0 { padding-bottom: 0; }
+  .u-md-pl0 { padding-left: 0; }
+  .u-md-px0 { padding-left: 0; padding-right: 0; }
+  .u-md-py0 { padding-top: 0; padding-bottom: 0; }
+
+  .u-md-p1  { padding: rem($spacing-smallest); }
+  .u-md-pt1 { padding-top: rem($spacing-smallest); }
+  .u-md-pr1 { padding-right: rem($spacing-smallest); }
+  .u-md-pb1 { padding-bottom: rem($spacing-smallest); }
+  .u-md-pl1 { padding-left: rem($spacing-smallest); }
+  .u-md-px1 { padding-left: rem($spacing-smallest); padding-right: rem($spacing-smallest); }
+  .u-md-py1 { padding-top: rem($spacing-smallest); padding-bottom: rem($spacing-smallest); }
+
+  .u-md-p2  { padding: rem($spacing-smaller); }
+  .u-md-pt2 { padding-top: rem($spacing-smaller); }
+  .u-md-pr2 { padding-right: rem($spacing-smaller); }
+  .u-md-pb2 { padding-bottom: rem($spacing-smaller); }
+  .u-md-pl2 { padding-left: rem($spacing-smaller); }
+  .u-md-px2 { padding-left: rem($spacing-smaller); padding-right: rem($spacing-smaller); }
+  .u-md-py2 { padding-top: rem($spacing-smaller); padding-bottom: rem($spacing-smaller); }
+
+  .u-md-p3  { padding: rem($spacing-small); }
+  .u-md-pt3 { padding-top: rem($spacing-small); }
+  .u-md-pr3 { padding-right: rem($spacing-small); }
+  .u-md-pb3 { padding-bottom: rem($spacing-small); }
+  .u-md-pl3 { padding-left: rem($spacing-small); }
+  .u-md-px3 { padding-left: rem($spacing-small); padding-right: rem($spacing-small); }
+  .u-md-py3 { padding-top: rem($spacing-small); padding-bottom: rem($spacing-small); }
+
+  .u-md-p4  { padding: rem($spacing-base); }
+  .u-md-pt4 { padding-top: rem($spacing-base); }
+  .u-md-pr4 { padding-right: rem($spacing-base); }
+  .u-md-pb4 { padding-bottom: rem($spacing-base); }
+  .u-md-pl4 { padding-left: rem($spacing-base); }
+  .u-md-px4 { padding-left: rem($spacing-base); padding-right: rem($spacing-base); }
+  .u-md-py4 { padding-top: rem($spacing-base); padding-bottom: rem($spacing-base); }
+
+  .u-md-p5  { padding: rem($spacing-large); }
+  .u-md-pt5 { padding-top: rem($spacing-large); }
+  .u-md-pr5 { padding-right: rem($spacing-large); }
+  .u-md-pb5 { padding-bottom: rem($spacing-large); }
+  .u-md-pl5 { padding-left: rem($spacing-large); }
+  .u-md-px5 { padding-left: rem($spacing-large); padding-right: rem($spacing-large); }
+  .u-md-py5 { padding-top: rem($spacing-large); padding-bottom: rem($spacing-large); }
+
+  .u-md-p6  { padding: rem($spacing-larger); }
+  .u-md-pt6 { padding-top: rem($spacing-larger); }
+  .u-md-pr6 { padding-right: rem($spacing-larger); }
+  .u-md-pb6 { padding-bottom: rem($spacing-larger); }
+  .u-md-pl6 { padding-left: rem($spacing-larger); }
+  .u-md-px6 { padding-left: rem($spacing-larger); padding-right: rem($spacing-larger); }
+  .u-md-py6 { padding-top: rem($spacing-larger); padding-bottom: rem($spacing-larger); }
+
+  .u-md-p7  { padding: rem($spacing-largest); }
+  .u-md-pt7 { padding-top: rem($spacing-largest); }
+  .u-md-pr7 { padding-right: rem($spacing-largest); }
+  .u-md-pb7 { padding-bottom: rem($spacing-largest); }
+  .u-md-pl7 { padding-left: rem($spacing-largest); }
+  .u-md-px7 { padding-left: rem($spacing-largest); padding-right: rem($spacing-largest); }
+  .u-md-py7 { padding-top: rem($spacing-largest); padding-bottom: rem($spacing-largest); }
+
+  .u-md-p8  { padding: rem($spacing-huge); }
+  .u-md-pt8 { padding-top: rem($spacing-huge); }
+  .u-md-pr8 { padding-right: rem($spacing-huge); }
+  .u-md-pb8 { padding-bottom: rem($spacing-huge); }
+  .u-md-pl8 { padding-left: rem($spacing-huge); }
+  .u-md-px8 { padding-left: rem($spacing-huge); padding-right: rem($spacing-huge); }
+  .u-md-py8 { padding-top: rem($spacing-huge); padding-bottom: rem($spacing-huge); }
+}
+
+/*
+   Large breakpoint
+   ========================================================================== */
+
+@include breakpointUp(large) {
+  .u-lg-p0  { padding: 0; }
+  .u-lg-pt0 { padding-top: 0; }
+  .u-lg-pr0 { padding-right: 0; }
+  .u-lg-pb0 { padding-bottom: 0; }
+  .u-lg-pl0 { padding-left: 0; }
+  .u-lg-px0 { padding-left: 0; padding-right: 0; }
+  .u-lg-py0 { padding-top: 0; padding-bottom: 0; }
+
+  .u-lg-p1  { padding: rem($spacing-smallest); }
+  .u-lg-pt1 { padding-top: rem($spacing-smallest); }
+  .u-lg-pr1 { padding-right: rem($spacing-smallest); }
+  .u-lg-pb1 { padding-bottom: rem($spacing-smallest); }
+  .u-lg-pl1 { padding-left: rem($spacing-smallest); }
+  .u-lg-px1 { padding-left: rem($spacing-smallest); padding-right: rem($spacing-smallest); }
+  .u-lg-py1 { padding-top: rem($spacing-smallest); padding-bottom: rem($spacing-smallest); }
+
+  .u-lg-p2  { padding: rem($spacing-smaller); }
+  .u-lg-pt2 { padding-top: rem($spacing-smaller); }
+  .u-lg-pr2 { padding-right: rem($spacing-smaller); }
+  .u-lg-pb2 { padding-bottom: rem($spacing-smaller); }
+  .u-lg-pl2 { padding-left: rem($spacing-smaller); }
+  .u-lg-px2 { padding-left: rem($spacing-smaller); padding-right: rem($spacing-smaller); }
+  .u-lg-py2 { padding-top: rem($spacing-smaller); padding-bottom: rem($spacing-smaller); }
+
+  .u-lg-p3  { padding: rem($spacing-small); }
+  .u-lg-pt3 { padding-top: rem($spacing-small); }
+  .u-lg-pr3 { padding-right: rem($spacing-small); }
+  .u-lg-pb3 { padding-bottom: rem($spacing-small); }
+  .u-lg-pl3 { padding-left: rem($spacing-small); }
+  .u-lg-px3 { padding-left: rem($spacing-small); padding-right: rem($spacing-small); }
+  .u-lg-py3 { padding-top: rem($spacing-small); padding-bottom: rem($spacing-small); }
+
+  .u-lg-p4  { padding: rem($spacing-base); }
+  .u-lg-pt4 { padding-top: rem($spacing-base); }
+  .u-lg-pr4 { padding-right: rem($spacing-base); }
+  .u-lg-pb4 { padding-bottom: rem($spacing-base); }
+  .u-lg-pl4 { padding-left: rem($spacing-base); }
+  .u-lg-px4 { padding-left: rem($spacing-base); padding-right: rem($spacing-base); }
+  .u-lg-py4 { padding-top: rem($spacing-base); padding-bottom: rem($spacing-base); }
+
+  .u-lg-p5  { padding: rem($spacing-large); }
+  .u-lg-pt5 { padding-top: rem($spacing-large); }
+  .u-lg-pr5 { padding-right: rem($spacing-large); }
+  .u-lg-pb5 { padding-bottom: rem($spacing-large); }
+  .u-lg-pl5 { padding-left: rem($spacing-large); }
+  .u-lg-px5 { padding-left: rem($spacing-large); padding-right: rem($spacing-large); }
+  .u-lg-py5 { padding-top: rem($spacing-large); padding-bottom: rem($spacing-large); }
+
+  .u-lg-p6  { padding: rem($spacing-larger); }
+  .u-lg-pt6 { padding-top: rem($spacing-larger); }
+  .u-lg-pr6 { padding-right: rem($spacing-larger); }
+  .u-lg-pb6 { padding-bottom: rem($spacing-larger); }
+  .u-lg-pl6 { padding-left: rem($spacing-larger); }
+  .u-lg-px6 { padding-left: rem($spacing-larger); padding-right: rem($spacing-larger); }
+  .u-lg-py6 { padding-top: rem($spacing-larger); padding-bottom: rem($spacing-larger); }
+
+  .u-lg-p7  { padding: rem($spacing-largest); }
+  .u-lg-pt7 { padding-top: rem($spacing-largest); }
+  .u-lg-pr7 { padding-right: rem($spacing-largest); }
+  .u-lg-pb7 { padding-bottom: rem($spacing-largest); }
+  .u-lg-pl7 { padding-left: rem($spacing-largest); }
+  .u-lg-px7 { padding-left: rem($spacing-largest); padding-right: rem($spacing-largest); }
+  .u-lg-py7 { padding-top: rem($spacing-largest); padding-bottom: rem($spacing-largest); }
+
+  .u-lg-p8  { padding: rem($spacing-huge); }
+  .u-lg-pt8 { padding-top: rem($spacing-huge); }
+  .u-lg-pr8 { padding-right: rem($spacing-huge); }
+  .u-lg-pb8 { padding-bottom: rem($spacing-huge); }
+  .u-lg-pl8 { padding-left: rem($spacing-huge); }
+  .u-lg-px8 { padding-left: rem($spacing-huge); padding-right: rem($spacing-huge); }
+  .u-lg-py8 { padding-top: rem($spacing-huge); padding-bottom: rem($spacing-huge); }
+}
+
+} // end if

@@ -1,0 +1,348 @@
+/* ==========================================================================
+ * Flex utility classes
+ * --------------------------------------------------------------------------
+ * SUIT CSS flexbox utilities - https://github.com/suitcss/utils-flex
+ *
+ * Need help with flexbox?
+ * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * ========================================================================== */
+
+/* Classes that apply to the parent (flex container)
+   ========================================================================== */
+
+/**
+ * Container
+ */
+
+.u-flex { display: flex !important; }
+.u-inlineFlex { display: inline-flex !important; }
+
+/**
+ * Direction: row
+ */
+
+.u-flexRow { flex-direction: row !important; }
+.u-flexRowReverse { flex-direction: row-reverse !important; }
+
+/**
+ * Direction: column
+ */
+
+.u-flexCol { flex-direction: column !important; }
+.u-flexColReverse { flex-direction: column-reverse !important; }
+
+/**
+ * Wrap
+ */
+
+.u-flexWrap { flex-wrap: wrap !important; }
+.u-flexNoWrap { flex-wrap: nowrap !important; }
+.u-flexWrapReverse { flex-wrap: wrap-reverse !important; }
+
+/**
+ * Align items along the main axis of the current line of the flex container
+ */
+
+.u-justifyStart { justify-content: flex-start !important; }
+.u-justifyEnd { justify-content: flex-end !important; }
+.u-justifyCenter { justify-content: center !important; }
+.u-justifyBetween { justify-content: space-between !important; }
+.u-justifyAround { justify-content: space-around !important; }
+
+/**
+ * Align items in the cross axis of the current line of the flex container
+ * Similar to `justify-content` but in the perpendicular direction
+ */
+
+.u-itemsStart { align-items: flex-start !important; }
+.u-itemsEnd { align-items: flex-end !important; }
+.u-itemsCenter { align-items: center !important; }
+.u-itemsStretch { align-items: stretch !important; }
+.u-itemsBaseline { align-items: baseline !important; }
+
+/**
+ * Aligns items within the flex container when there is extra
+ * space in the cross-axis
+ *
+ * Has no effect when there is only one line of flex items.
+ */
+
+.u-contentStart { align-content: flex-start !important; }
+.u-contentEnd { align-content: flex-end !important; }
+.u-contentCenter { align-content: center !important; }
+.u-contentStretch { align-content: stretch !important; }
+.u-contentBetween { align-content: space-between !important; }
+.u-contentAround { align-content: space-around !important; }
+
+/**
+ * 1. Set the flex-shrink default explicitly to fix IE10 - http://git.io/vllC7
+ */
+
+.u-flex > *,
+.u-inlineFlex > * {
+  flex-shrink: 1; // 1
+}
+
+/* Classes that apply to the children (flex items)
+   ========================================================================== */
+
+/**
+ * Override default alignment of single item when specified by `align-items`
+ */
+
+.u-selfStart { align-self: flex-start !important; }
+.u-selfEnd { align-self: flex-end !important; }
+.u-selfCenter { align-self: center !important; }
+.u-selfStretch { align-self: stretch !important; }
+.u-selfBaseline { align-self: baseline !important; }
+.u-selfAuto { align-self: auto !important; }
+
+/**
+ * Change order without editing underlying HTML
+ */
+
+.u-orderNone { order: 0 !important; }
+.u-orderFirst { order: -1 !important; }
+// .u-order0 { order: 0 !important; }
+// .u-order1 { order: 1 !important; }
+// .u-order2 { order: 2 !important; }
+// .u-order3 { order: 3 !important; }
+// .u-order4 { order: 4 !important; }
+// .u-order5 { order: 5 !important; }
+// .u-order6 { order: 6 !important; }
+// .u-order7 { order: 7 !important; }
+// .u-order8 { order: 8 !important; }
+// .u-order9 { order: 9 !important; }
+// .u-order10 { order: 10 !important; }
+.u-orderLast { order: 99999 !important; }
+
+/**
+ * Specify the flex grow factor, which determines how much the flex item will
+ * grow relative to the rest of the flex items in the flex container.
+ *
+ * Supports 1-5 proportions
+ *
+ * 1. Provide all values to avoid IE10 bug with shorthand flex
+ *    - http://git.io/vllC7
+ *
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis. Using this
+ *    instead of `auto` as this matches what the default would be with `flex`
+ *    shorthand - http://git.io/vllWx
+ */
+
+.u-flexGrow1 { flex: 1 1 0% !important; /* 1 */ }
+.u-flexGrow2 { flex: 2 1 0% !important; }
+.u-flexGrow3 { flex: 3 1 0% !important; }
+.u-flexGrow4 { flex: 4 1 0% !important; }
+.u-flexGrow5 { flex: 5 1 0% !important; }
+
+/**
+ * Aligning with `auto` margins
+ * http://www.w3.org/TR/css-flexbox-1/#auto-margins
+ */
+
+.u-expand { margin: auto !important; }
+.u-expandLeft { margin-left: auto !important; }
+.u-expandRight { margin-right: auto !important; }
+.u-expandTop { margin-top: auto !important; }
+.u-expandBottom { margin-bottom: auto !important; }
+
+
+/* ==========================================================================
+   Small breakpoint
+   ========================================================================== */
+
+@include breakpointUp(small) {
+  .u-sm-flex { display: flex !important; }
+  .u-sm-inlineFlex { display: inline-flex !important; }
+  .u-sm-flexRow { flex-direction: row !important; }
+  .u-sm-flexRowReverse { flex-direction: row-reverse !important; }
+  .u-sm-flexCol { flex-direction: column !important; }
+  .u-sm-flexColReverse { flex-direction: column-reverse !important; }
+  .u-sm-flexWrap { flex-wrap: wrap !important; }
+  .u-sm-flexNoWrap { flex-wrap: nowrap !important; }
+  .u-sm-flexWrapReverse { flex-wrap: wrap-reverse !important; }
+  .u-sm-justifyStart { justify-content: flex-start !important; }
+  .u-sm-justifyEnd { justify-content: flex-end !important; }
+  .u-sm-justifyCenter { justify-content: center !important; }
+  .u-sm-justifyBetween { justify-content: space-between !important; }
+  .u-sm-justifyAround { justify-content: space-around !important; }
+  .u-sm-itemsStart { align-items: flex-start !important; }
+  .u-sm-itemsEnd { align-items: flex-end !important; }
+  .u-sm-itemsCenter { align-items: center !important; }
+  .u-sm-itemsStretch { align-items: stretch !important; }
+  .u-sm-itemsBaseline { align-items: baseline !important; }
+  .u-sm-contentStart { align-content: flex-start !important; }
+  .u-sm-contentEnd { align-content: flex-end !important; }
+  .u-sm-contentCenter { align-content: center !important; }
+  .u-sm-contentStretch { align-content: stretch !important; }
+  .u-sm-contentBetween { align-content: space-between !important; }
+  .u-sm-contentAround { align-content: space-around !important; }
+  .u-sm-flex > *,
+  .u-sm-inlineFlex > * { flex-shrink: 1; }
+
+  .u-sm-selfStart { align-self: flex-start !important; }
+  .u-sm-selfEnd { align-self: flex-end !important; }
+  .u-sm-selfCenter { align-self: center !important; }
+  .u-sm-selfStretch { align-self: stretch !important; }
+  .u-sm-selfBaseline { align-self: baseline !important; }
+  .u-sm-selfAuto { align-self: auto !important; }
+  .u-sm-orderNone { order: 0 !important; }
+  .u-sm-orderFirst { order: -1 !important; }
+  // .u-sm-order0 { order: 0 !important; }
+  // .u-sm-order1 { order: 1 !important; }
+  // .u-sm-order2 { order: 2 !important; }
+  // .u-sm-order3 { order: 3 !important; }
+  // .u-sm-order4 { order: 4 !important; }
+  // .u-sm-order5 { order: 5 !important; }
+  // .u-sm-order6 { order: 6 !important; }
+  // .u-sm-order7 { order: 7 !important; }
+  // .u-sm-order8 { order: 8 !important; }
+  // .u-sm-order9 { order: 9 !important; }
+  // .u-sm-order10 { order: 10 !important; }
+  .u-sm-orderLast { order: 99999 !important; }
+  .u-sm-flexGrow1 { flex: 1 1 0% !important; }
+  .u-sm-flexGrow2 { flex: 2 1 0% !important; }
+  .u-sm-flexGrow3 { flex: 3 1 0% !important; }
+  .u-sm-flexGrow4 { flex: 4 1 0% !important; }
+  .u-sm-flexGrow5 { flex: 5 1 0% !important; }
+
+  .u-sm-expand { margin: auto !important; }
+  .u-sm-expandLeft { margin-left: auto !important; }
+  .u-sm-expandRight { margin-right: auto !important; }
+  .u-sm-expandTop { margin-top: auto !important; }
+  .u-sm-expandBottom { margin-bottom: auto !important; }
+}
+
+
+/* ==========================================================================
+   Medium breakpoint
+   ========================================================================== */
+
+@include breakpointUp(medium) {
+  .u-md-flex { display: flex !important; }
+  .u-md-inlineFlex { display: inline-flex !important; }
+  .u-md-flexRow { flex-direction: row !important; }
+  .u-md-flexRowReverse { flex-direction: row-reverse !important; }
+  .u-md-flexCol { flex-direction: column !important; }
+  .u-md-flexColReverse { flex-direction: column-reverse !important; }
+  .u-md-flexWrap { flex-wrap: wrap !important; }
+  .u-md-flexNoWrap { flex-wrap: nowrap !important; }
+  .u-md-flexWrapReverse { flex-wrap: wrap-reverse !important; }
+  .u-md-justifyStart { justify-content: flex-start !important; }
+  .u-md-justifyEnd { justify-content: flex-end !important; }
+  .u-md-justifyCenter { justify-content: center !important; }
+  .u-md-justifyBetween { justify-content: space-between !important; }
+  .u-md-justifyAround { justify-content: space-around !important; }
+  .u-md-itemsStart { align-items: flex-start !important; }
+  .u-md-itemsEnd { align-items: flex-end !important; }
+  .u-md-itemsCenter { align-items: center !important; }
+  .u-md-itemsStretch { align-items: stretch !important; }
+  .u-md-itemsBaseline { align-items: baseline !important; }
+  .u-md-contentStart { align-content: flex-start !important; }
+  .u-md-contentEnd { align-content: flex-end !important; }
+  .u-md-contentCenter { align-content: center !important; }
+  .u-md-contentStretch { align-content: stretch !important; }
+  .u-md-contentBetween { align-content: space-between !important; }
+  .u-md-contentAround { align-content: space-around !important; }
+  .u-md-flex > *,
+  .u-md-inlineFlex > * { flex-shrink: 1; }
+
+  .u-md-selfStart { align-self: flex-start !important; }
+  .u-md-selfEnd { align-self: flex-end !important; }
+  .u-md-selfCenter { align-self: center !important; }
+  .u-md-selfStretch { align-self: stretch !important; }
+  .u-md-selfBaseline { align-self: baseline !important; }
+  .u-md-selfAuto { align-self: auto !important; }
+  .u-md-orderNone { order: 0 !important; }
+  .u-md-orderFirst { order: -1 !important; }
+  // .u-md-order0 { order: 0 !important; }
+  // .u-md-order1 { order: 1 !important; }
+  // .u-md-order2 { order: 2 !important; }
+  // .u-md-order3 { order: 3 !important; }
+  // .u-md-order4 { order: 4 !important; }
+  // .u-md-order5 { order: 5 !important; }
+  // .u-md-order6 { order: 6 !important; }
+  // .u-md-order7 { order: 7 !important; }
+  // .u-md-order8 { order: 8 !important; }
+  // .u-md-order9 { order: 9 !important; }
+  // .u-md-order10 { order: 10 !important; }
+  .u-md-orderLast { order: 99999 !important; }
+  .u-md-flexGrow1 { flex: 1 1 0% !important; }
+  .u-md-flexGrow2 { flex: 2 1 0% !important; }
+  .u-md-flexGrow3 { flex: 3 1 0% !important; }
+  .u-md-flexGrow4 { flex: 4 1 0% !important; }
+  .u-md-flexGrow5 { flex: 5 1 0% !important; }
+
+  .u-md-expand { margin: auto !important; }
+  .u-md-expandLeft { margin-left: auto !important; }
+  .u-md-expandRight { margin-right: auto !important; }
+  .u-md-expandTop { margin-top: auto !important; }
+  .u-md-expandBottom { margin-bottom: auto !important; }
+}
+
+/* ==========================================================================
+   Large breakpoint
+   ========================================================================== */
+
+@include breakpointUp(large) {
+  .u-lg-flex { display: flex !important; }
+  .u-lg-inlineFlex { display: inline-flex !important; }
+  .u-lg-flexRow { flex-direction: row !important; }
+  .u-lg-flexRowReverse { flex-direction: row-reverse !important; }
+  .u-lg-flexCol { flex-direction: column !important; }
+  .u-lg-flexColReverse { flex-direction: column-reverse !important; }
+  .u-lg-flexWrap { flex-wrap: wrap !important; }
+  .u-lg-flexNoWrap { flex-wrap: nowrap !important; }
+  .u-lg-flexWrapReverse { flex-wrap: wrap-reverse !important; }
+  .u-lg-justifyStart { justify-content: flex-start !important; }
+  .u-lg-justifyEnd { justify-content: flex-end !important; }
+  .u-lg-justifyCenter { justify-content: center !important; }
+  .u-lg-justifyBetween { justify-content: space-between !important; }
+  .u-lg-justifyAround { justify-content: space-around !important; }
+  .u-lg-itemsStart { align-items: flex-start !important; }
+  .u-lg-itemsEnd { align-items: flex-end !important; }
+  .u-lg-itemsCenter { align-items: center !important; }
+  .u-lg-itemsStretch { align-items: stretch !important; }
+  .u-lg-itemsBaseline { align-items: baseline !important; }
+  .u-lg-contentStart { align-content: flex-start !important; }
+  .u-lg-contentEnd { align-content: flex-end !important; }
+  .u-lg-contentCenter { align-content: center !important; }
+  .u-lg-contentStretch { align-content: stretch !important; }
+  .u-lg-contentBetween { align-content: space-between !important; }
+  .u-lg-contentAround { align-content: space-around !important; }
+  .u-lg-flex > *,
+  .u-lg-inlineFlex > * { flex-shrink: 1; }
+
+  .u-lg-selfStart { align-self: flex-start !important; }
+  .u-lg-selfEnd { align-self: flex-end !important; }
+  .u-lg-selfCenter { align-self: center !important; }
+  .u-lg-selfStretch { align-self: stretch !important; }
+  .u-lg-selfBaseline { align-self: baseline !important; }
+  .u-lg-selfAuto { align-self: auto !important; }
+  .u-lg-orderNone { order: 0 !important; }
+  .u-lg-orderFirst { order: -1 !important; }
+  // .u-lg-order0 { order: 0 !important; }
+  // .u-lg-order1 { order: 1 !important; }
+  // .u-lg-order2 { order: 2 !important; }
+  // .u-lg-order3 { order: 3 !important; }
+  // .u-lg-order4 { order: 4 !important; }
+  // .u-lg-order5 { order: 5 !important; }
+  // .u-lg-order6 { order: 6 !important; }
+  // .u-lg-order7 { order: 7 !important; }
+  // .u-lg-order8 { order: 8 !important; }
+  // .u-lg-order9 { order: 9 !important; }
+  // .u-lg-order10 { order: 10 !important; }
+  .u-lg-orderLast { order: 99999 !important; }
+  .u-lg-flexGrow1 { flex: 1 1 0% !important; }
+  .u-lg-flexGrow2 { flex: 2 1 0% !important; }
+  .u-lg-flexGrow3 { flex: 3 1 0% !important; }
+  .u-lg-flexGrow4 { flex: 4 1 0% !important; }
+  .u-lg-flexGrow5 { flex: 5 1 0% !important; }
+
+  .u-lg-expand { margin: auto !important; }
+  .u-lg-expandLeft { margin-left: auto !important; }
+  .u-lg-expandRight { margin-right: auto !important; }
+  .u-lg-expandTop { margin-top: auto !important; }
+  .u-lg-expandBottom { margin-bottom: auto !important; }
+}

@@ -1,0 +1,159 @@
+/* ==========================================================================
+ * Colors
+ * --------------------------------------------------------------------------
+ * Global color variables.
+ * ========================================================================== */
+
+/**
+ * Helper Grayscale
+ *
+ * Use these when you ned a shade of gray that's not part of the main brand
+ * grayscale.
+ */
+
+$color-white: #fff !default;
+$color-black1: darken($color-white, 1%) !default;
+$color-black2: darken($color-white, 2%) !default;
+$color-black3: darken($color-white, 3%) !default;
+$color-black4: darken($color-white, 4%) !default;
+$color-black5: darken($color-white, 5%) !default;
+$color-black10: darken($color-white, 10%) !default;
+$color-black20: darken($color-white, 20%) !default;
+$color-black30: darken($color-white, 30%) !default;
+$color-black40: darken($color-white, 40%) !default;
+$color-black50: darken($color-white, 50%) !default;
+$color-black60: darken($color-white, 60%) !default;
+$color-black70: darken($color-white, 70%) !default;
+$color-black80: darken($color-white, 80%) !default;
+$color-black90: darken($color-white, 90%) !default;
+$color-black: #000 !default;
+
+/**
+ * Brand grayscale
+ *
+ * Use these as often as possible. These are mostly used as background/text
+ * colors.
+ */
+
+$color-grayLightest: #f1f2f2 !default;
+$color-grayLighter: #eee !default;
+$color-grayLight: #e6e6e6 !default;
+$color-gray: #ced1d1 !default;
+$color-grayDark: #999 !default;
+$color-grayDarker: #666 !default;
+$color-grayDarkest: #333 !default;
+$color-blackish: #111 !default;
+
+/**
+ * Colors
+ */
+
+$color-blue: #0083db !default;
+$color-blueLight: #0ba3e6 !default;
+$color-blueDark: #00579c !default;
+
+$color-green: #8bc34a !default;
+$color-greenLight: #dcedc8 !default;
+$color-greenDark: #689f38 !default;
+
+// $color-greenAlt: #cddc39;
+
+/**
+ * Brand Colors
+ */
+
+$color-primary: $color-blue !default;
+$color-primaryLight: $color-blueLight !default;
+$color-primaryDark: $color-blueDark !default;
+
+$color-secondary: $color-green !default;
+$color-secondaryLight: $color-greenLight !default;
+$color-secondaryDark: $color-greenDark !default;
+
+// $color-alt: $color-greenAlt !default;
+// $color-altLight: $color-greenAlt !default;
+// $color-altDark: $color-greenAlt !default;
+
+// $color-success:   #5cb85c !default;
+$color-success:   #58ce8a !default;
+// $color-info:      #5bc0de !default;
+$color-info:      $color-blueLight !default;
+$color-warning:   #eaa138 !default;
+// $color-danger:    #d9534f !default;
+$color-danger:    #ed4337 !default;
+$color-error:    $color-danger;
+
+$color-highlight:   rgba(255, 255, 255, .05) !default;
+// $color-shadow:      rgba(0, 0, 0, .08) !default;
+$color-shadow:      rgba(255, 255, 255, .1) !default;
+$color-shadowInset: rgba(34, 40, 52, .7) !default;
+
+$color-accent-purple: #BF529E;
+
+/**
+ * Blue Scale
+ */
+
+// Primarily used for bg's and borders.
+$color-blue1: #FAFDFF !default;
+$color-blue2: #EFF9FF !default;
+$color-blue3: #DEF1FC !default;
+$color-blue4: #ACDBF6 !default;
+
+// Blues that are damn near identical to primary colors so no idea
+// why we have them.
+$color-blue5: #2EB9F7 !default;
+$color-blue6: #0BA3E6 !default;
+$color-blue7: #1392DB !default;
+
+// Dark blues for bg's and borders and such.
+$color-blue8: #0071BD !default;
+$color-blue9: #00579C !default;
+$color-blue10: #024880 !default;
+$color-blue11: #002953 !default;
+
+/**
+ * Links
+ */
+
+$color-link:          $color-primary !default;
+$color-linkHover:     darken($color-link, 15%) !default;
+
+// $color-linkDark:          $color-grayDark !default;
+// $color-linkDarkHover:     lighten($color-grayDark, 15%) !default;
+//
+// $color-linkDarker:          $color-grayDarker !default;
+// $color-linkDarkerHover:     lighten($color-grayDarker, 15%) !default;
+//
+// $color-linkLight:          $color-grayLight !default;
+// $color-linkLightHover:     darken($color-grayLight, 25%) !default;
+
+/**
+ * Scafolding
+ */
+
+$color-bodyBackground:   $color-white !default;
+$color-bodyText:         $color-blackish !default;
+
+/**
+ * Text color styles
+ */
+
+$color-textWhisper:   $color-black30 !default;
+$color-textQuiet:     $color-black40 !default;
+$color-textLoud:      $color-black90 !default;
+
+/**
+ * Social media colors
+ */
+
+$color-twitter: #55acee;
+$color-facebook: #3b5998;
+$color-googleplus: #dd4b39;
+// $color-pinterest: #cb2027;
+$color-linkedin: #0077b5;
+$color-youtube: #e62117;
+// $color-vimeo: #1ab7ea;
+// $color-tumblr: #32506d;
+$color-instagram: #bc2a8d;
+// $color-flickr: #ff0084;

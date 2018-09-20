@@ -1,0 +1,39 @@
+@mixin buttonVariant(
+  $bgColor,
+  $borderColor,
+  $color,
+  $bgColorHover: $bgColor,
+  $borderColorHover: $borderColor,
+  $colorHover: $color
+  ) {
+  background-color: $bgColor;
+  border-color: $borderColor;
+  color: $color;
+
+  &.button--iconOnly > svg {
+    fill: $color;
+    display: block;
+  }
+
+  &:hover {
+    background-color: $bgColorHover;
+    border-color: $borderColorHover;
+    color: $colorHover;
+    transform: translateY(-1px);
+    box-shadow: $boxShadow-2;
+  }
+
+  &:active {
+    transform: scale(.99);
+  }
+
+  &.is-active {
+    background-color: $bgColorHover;
+    border-color: $borderColorHover;
+    color: $colorHover;
+    // transform: scale(0), translateY(0) !important;
+    // box-shadow: none !important;
+  }
+}
+
+// :not(.button--disabled):not(:disabled):hover

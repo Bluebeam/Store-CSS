@@ -1,0 +1,32 @@
+/* ==========================================================================
+ * #TRANSITIONS
+ * --------------------------------------------------------------------------
+ * Transition utilities
+ * ========================================================================== */
+
+/* Combine with other classes for many different
+transition possibilities. */
+
+.u-transAll,
+.u-transAll:hover,
+.u-transAll:focus {
+  transition: all $animSpeed-basic ease-in-out;
+}
+
+.u-transColor,
+.u-transColor:hover,
+.u-transColor:focus {
+  transition: color $animSpeed-basic ease-in-out;
+}
+
+.u-transBg,
+.u-transBg:hover,
+.u-transBg:focus {
+  transition: background-color $animSpeed-basic ease-in-out;
+}
+
+.u-transBorder,
+.u-transBorder:hover,
+.u-transBorder:focus {
+  transition: border-color $animSpeed-basic ease-in-out;
+}

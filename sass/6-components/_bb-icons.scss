@@ -1,0 +1,112 @@
+/* ==========================================================================
+   $ICONS
+   ========================================================================== */
+
+$icomoon-font-path: "../fonts" !default;
+
+$icon-angleRightCircle: "\e900";
+$icon-checkCircle: "\e901";
+$icon-arrowDropDown: "\e5c5";
+$icon-arrowDropUp: "\e5c7";
+$icon-block: "\e14b";
+$icon-check: "\e5ca";
+$icon-close: "\e5cd";
+$icon-errorCircle: "\e001";
+$icon-arrowUp: "\e5ce";
+$icon-arrowDown: "\e5cf";
+$icon-infoCircle: "\e88f";
+$icon-arrowLeft: "\e408";
+$icon-arrowRight: "\e409";
+$icon-playCircle: "\e039";
+$icon-calendar: "\e916";
+$icon-search: "\e8b6";
+$icon-cart: "\e8cc";
+$icon-mail: "\f003";
+$icon-facebook: "\f09a";
+$icon-instagram: "\f16d";
+$icon-linkedin: "\f0e1";
+$icon-twitter: "\f099";
+$icon-vine: "\f1ca";
+$icon-youtube: "\f16a";
+
+
+@font-face {
+  font-family: 'bluebeam-icons';
+  src:
+    url('#{$icomoon-font-path}/bluebeam-icons.ttf?s89m2pARA') format('truetype'),
+    url('#{$icomoon-font-path}/bluebeam-icons.woff?s89m2pARA') format('woff'),
+    url('#{$icomoon-font-path}/bluebeam-icons.svg?s89m2pARA#bluebeam-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+   Core styles
+   ========================================================================== */
+
+.icon {
+  @include rem(font-size, 24px);
+
+  font-family: "bluebeam-icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  display: inline-block;
+  line-height: 1;
+  word-wrap: normal;
+  white-space: nowrap;
+  // direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/*
+   Modifier: Icon type
+   ========================================================================== */
+
+.icon--angleRightCircle:before { content: $icon-angleRightCircle; }
+.icon--checkCircle:before { content: $icon-checkCircle; }
+.icon--arrowDropDown:before { content: $icon-arrowDropDown; }
+.icon--arrowDropUp:before { content: $icon-arrowDropUp; }
+.icon--block:before { content: $icon-block; }
+.icon--calendar:before { content: $icon-calendar; }
+.icon--check:before { content: $icon-check; }
+.icon--close:before { content: $icon-close; }
+.icon--errorCircle:before { content: $icon-errorCircle; }
+.icon--arrowUp:before { content: $icon-arrowUp; }
+.icon--arrowDown:before { content: $icon-arrowDown; }
+.icon--infoCircle:before { content: $icon-infoCircle; }
+.icon--arrowLeft:before { content: $icon-arrowLeft; }
+.icon--arrowRight:before { content: $icon-arrowRight; }
+.icon--playCircle:before { content: $icon-playCircle; }
+.icon--search:before { content: $icon-search; }
+.icon--cart:before { content: $icon-cart; }
+.icon--mail:before { content: $icon-mail; }
+.icon--facebook:before { content: $icon-facebook; }
+.icon--instagram:before { content: $icon-instagram; }
+.icon--linkedin:before { content: $icon-linkedin; }
+.icon--twitter:before { content: $icon-twitter; }
+.icon--vine:before { content: $icon-vine; }
+.icon--youtube:before { content: $icon-youtube; }
+
+/*
+   Modifier: Icon size
+   ========================================================================== */
+
+.icon--sm { @include rem(font-size, 16px); }
+// .icon--lg { @include rem(font-size, 24px); } // default size is 24px
+.icon--lg { @include rem(font-size, 32px); }
+.icon--xl { @include rem(font-size, 48px); }
+.icon--xxl { @include rem(font-size, 64px); }

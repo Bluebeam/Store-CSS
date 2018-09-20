@@ -1,0 +1,15 @@
+/* ==========================================================================
+ * #VERTICAL-ALIGN
+ * --------------------------------------------------------------------------
+ * Vertical align anything.
+ * http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+ *
+ * Usage:
+ * @include verticalAlign() or @include verticalAlign(absolute)
+ * ========================================================================== */
+
+@mixin verticalAlign($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,82 @@
+/* ==========================================================================
+ * #BREAKPOINT
+ * --------------------------------------------------------------------------
+ * These mixins makes it easy to use media queries in your code. It uses the
+ * variables defined in: bluprnt/sass/settings/_media-queries.scss
+ *
+ * Usage:
+
+@include breakpointBetween(small, medium) {
+  float: left;
+}
+
+@include breakpointUp(small) {
+  float: left;
+}
+
+@include breakpointDown(small) {
+  float: none;
+}
+
+ * ========================================================================== */
+
+/**
+ * Set size breakpoint mixin, for targeting a specific size only.
+ */
+
+@mixin breakpointBetween($breakpointMin, $breakpointMax) {
+  @if map-has-key($breakpoints, $breakpointMin) && map-has-key($breakpoints, $breakpointMax) {
+    @media (min-width: #{map-get($breakpoints, $breakpointMin)}) and (max-width: #{map-get($breakpoints, $breakpointMax)}) {
+      @content;
+    }
+
+  } @elseif (type-of($breakpointMin) == number && type-of($breakpointMax) == number) {
+    @media (min-width: $breakpointMin) and (max-width: $breakpointMax) {
+      @content;
+    }
+
+  } @else {
+    @warn "No value could be retrieved.";
+  }
+}
+
+/**
+ * Min width breakpoint mixin, for targeting a specific size and up.
+ */
+
+@mixin breakpointUp($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @elseif (type-of($breakpoint) == number) {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+
+  } @else {
+    @warn "No value could be retrieved from `#{$breakpoint}`. "
+        + "Make sure it is defined in `$breakpoints` map located at: bluprnt/sass/settings/_breakpoints.scss";
+  }
+}
+
+/**
+ * Max width breakpoint mixin, for targeting a specific size and down.
+ */
+
+@mixin breakpointDown($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+
+  } @elseif (type-of($breakpoint) == number) {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+
+  } @else {
+    @warn "No value could be retrieved from `#{$breakpoint}`. "
+        + "Make sure it is defined in `$breakpoints` map located at: bluprnt/sass/settings/_breakpoints.scss";
+  }
+}

@@ -1,0 +1,69 @@
+/**
+* Prevent margin and border from affecting element width.
+* https://goo.gl/pYtbK7
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+/**
+ * A simple reset that sits on top of Normalize.css.
+ */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+pre,
+dl,
+dd,
+ol,
+ul,
+figure,
+hr,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+ // button {
+ //   background: transparent;
+ //   border: 0;
+ //   padding: 0;
+ // }
+
+// button:focus {
+//   outline: 1px dotted;
+//   outline: 5px auto -webkit-focus-ring-color;
+// }
+
+iframe {
+  border: 0;
+}
+
+// ol,
+// ul {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }

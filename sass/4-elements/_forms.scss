@@ -1,0 +1,73 @@
+label {
+  // display: block;
+  display: inline-block;
+}
+
+// input {
+//   &[type="email"],
+//   &[type="number"],
+//   &[type="search"],
+//   &[type="text"],
+//   &[type="tel"],
+//   &[type="url"],
+//   &[type="password"] {
+//     display: block;
+//   }
+// }
+
+legend {
+  // display: block;
+  // width: 100%;
+  // padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+}
+
+// input,
+// select,
+// textarea {
+//   padding: rem(13px) rem(16px);
+//   line-height: $lineHeight-tightest;
+// }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  padding: 0;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+textarea {
+  overflow: auto;
+  min-height: rem(65px);
+  resize: vertical;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+/**
+ * Suppress the focus outline on elements that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+input[type="search"] {
+  // This overrides the extra rounded corners on search inputs in iOS so that our
+  // `.form-control` class can properly style them. Note that this cannot simply
+  // be added to `.form-control` as it's not specific enough. For details, see
+  // https://github.com/twbs/bootstrap/issues/11586.
+  -webkit-appearance: none;
+}

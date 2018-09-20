@@ -1,0 +1,38 @@
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+
+img {
+  max-width: 100%; /* [1] */
+  height: auto;
+  font-style: italic; /* [2] */
+  vertical-align: middle; /* [3] */
+  -ms-interpolation-mode: bicubic;
+}
+
+
+/**
+ * 1. If a `width` and/or `height` attribute have been explicitly defined, let’s
+ *    not make the image fluid.
+ */
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+/**
+ * Get rid of gap under images by making them display: inline-block; by default
+ */
+
+a img {
+  display: inline-block;
+}

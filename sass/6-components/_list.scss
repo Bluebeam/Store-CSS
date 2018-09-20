@@ -1,0 +1,136 @@
+/* ==========================================================================
+   #LIST
+   ========================================================================== */
+
+/*
+   Core list styles
+   ========================================================================== */
+
+/**
+ * Remove margin left and get rid of the bullets by default.
+ */
+
+.list {
+  list-style: none;
+  margin-left: 0;
+
+  // li {
+  //
+  // }
+
+}
+
+.list-divider {
+  list-style: none !important;
+  border-bottom: 1px solid $color-grayLight;
+
+  &::before { display: none !important; }
+}
+
+/*
+   Modifiers
+   ========================================================================== */
+
+/**
+ * Modifier: Make list items display inline.
+ */
+
+.list--inline {
+  // margin-left: -5px;
+
+  li {
+    display: inline-block;
+    margin-left: em(-5px);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+}
+
+/**
+ * Modifier: Make list items have a pipe after each item.
+ */
+
+.list--inlinePipe {
+  // margin-left: -5px;
+
+  li {
+    display: inline-block;
+    margin-right: em(5px);
+
+    &:after {
+      content: " | ";
+      padding-left: em(5px);
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &:after {
+        content: "";
+      }
+    }
+  }
+
+}
+
+/**
+ * Modifier: Add checkmark with circle image to each list item, creating a
+ * checklist.
+ */
+
+.list--checked {
+  margin-left: rem($spacing-base);
+
+  li {
+    position: relative;
+    padding-left: $spacing-smaller;
+
+    &::before {
+      @include bbIconFont;
+
+      content: "\e901";
+      color: $color-primary;
+      font-size: 18px;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      top: 3px;
+      left: -20px;
+    }
+  }
+
+}
+
+/*
+   Definition Lists
+   ========================================================================== */
+
+// .dlist {
+//   dt {
+//     font-weight: $fontWeight-bold;
+//   }
+//
+//   // dd {}
+// }
+//
+// @include breakpointUp(medium) {
+//   .dlist--horizontal {
+//     dt {
+//       // @include text-overflow();
+//
+//       float: left;
+//       width: rem(20px);
+//       clear: left;
+//       text-align: right;
+//     }
+//
+//     dd {
+//       @include clearfix();
+//
+//       margin-left: 20px;
+//     }
+//   }
+// }

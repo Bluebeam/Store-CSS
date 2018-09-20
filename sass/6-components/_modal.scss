@@ -1,0 +1,134 @@
+/*
+   The modal overlay
+   ========================================================================== */
+
+.blocker {
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+  @include rem(padding, $spacing-base);
+
+  overflow: auto;
+  z-index: $zIndex-9;
+  background-color: rgba(0, 0, 0, .75);
+  text-align: center;
+}
+
+.blocker:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -.05em;
+}
+
+// .blocker.behind {
+//   background-color: transparent;
+// }
+
+/*
+   Modal core styles
+   ========================================================================== */
+
+// .blocker,
+// .bpModal {
+//   transition: $transition-opacityFast;
+// }
+
+.bpModal {
+  display: none;
+  vertical-align: middle;
+  position: relative;
+  z-index: $zIndex-10;
+  width: 500px;
+  max-width: 99%;
+  max-height: 99%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: $color-grayLightest;
+  // padding: 15px 30px;
+  border: 1px solid $color-gray;
+  border-radius: $borderRadius-base;
+  box-shadow: $boxShadow-3;
+  text-align: left;
+
+  // left: 50%;
+  // top: $spacing-base;
+  // transform: translateX(-50%);
+  // backface-visibility: hidden;
+  // filter: blur(0);
+  // -webkit-font-smoothing: antialiased;
+  // transform: translate3d( 0, 0, 0);
+  // transform: perspective(1px) translateZ(0);
+
+
+  // @include breakpointUp(small) {
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+  // }
+}
+
+.current .bpModal {
+  display: inline-block !important;
+}
+
+.bpModal-header {
+  // @include rem(margin-bottom, $spacing-base);
+  // display: flex;
+  text-align: center;
+  border-bottom: 1px solid $color-gray;
+}
+
+.bpModal-body,
+.bpModal-header {
+  // @include rem(margin-bottom, $spacing-base);
+  @include rem(padding, $spacing-base);
+}
+
+.bpModal-title {
+  @include fontSize($fontSize-large);
+
+  margin: 0;
+}
+
+.bpModal-footer {
+  @include rem(padding-top, $spacing-small);
+  @include rem(padding-bottom, $spacing-small);
+  @include rem(padding-left, $spacing-base);
+  @include rem(padding-right, $spacing-base);
+
+  border-top: 1px solid $color-gray;
+  text-align: right;
+}
+
+.bpModal-close {
+  position: absolute;
+  top: $spacing-smallest;
+  right: $spacing-smaller;
+  display: block;
+  color: $color-grayDark;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+
+  &::before {
+    @include bbIconFont;
+    @include fontSize($fontSize-large);
+
+    content: "\e5cd";
+  }
+
+}
+
+.bpModal-spinner {
+  display: none;
+  position: fixed;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}

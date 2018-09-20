@@ -1,0 +1,43 @@
+/* ==========================================================================
+ * #FONT-SIZE
+ * --------------------------------------------------------------------------
+ * Mixin to generate a REM font size with a pixel fallback for older browsers.
+ * ========================================================================== */
+
+/**
+ * Usage:
+ *   @include font-size(20px, 28px);
+ */
+
+@mixin fontSize($fontSize, $lineHeight: "auto", $important: false) {
+
+  @if ($important == "important") {
+      $important: unquote("!important");
+  } @else {
+      $important: null;
+  }
+
+  // Old IE 8 fallback
+  @if ($supportOldIE) {
+    font-size: $fontSize $important;
+  }
+
+  // Rem unit
+  font-size: ($fontSize / $fontSize-base) * 1rem $important;
+
+  @if $lineHeight == auto {
+
+    $_lineHeight: ($fontSize + 8px);
+    line-height: lineHeight($_lineHeight, $fontSize);
+    // line-height: ceil($fontSize / $lineHeight-base) * ($lineHeight-base / $fontSize) $important;
+
+  } @else {
+
+    @if (type-of($lineHeight) == number or $lineHeight == inherit or $lineHeight == normal) {
+      line-height: $lineHeight $important;
+    } @elseif ($lineHeight != none and $lineHeight != false) {
+      @warn "D’oh! ‘#{$lineHeight}’ is not a valid value for `line-height`."
+    }
+
+  }
+}

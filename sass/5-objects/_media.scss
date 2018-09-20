@@ -1,0 +1,181 @@
+/* ==========================================================================
+ * #MEDIA
+ * --------------------------------------------------------------------------
+ * Based on:
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * http://csswizardry.com/2013/05/the-flag-object/
+ * ========================================================================== */
+
+/**
+ * Place any image- and text-like content side-by-side.
+ */
+
+.o-media {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.o-media-figure {
+  margin-right: $spacing-base;
+}
+
+.o-media-body {
+  // Provide all values to avoid IE10 bug with shorthand flex
+  flex: 1 1 0%;
+
+  &,
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+/* Size variants.
+   ========================================================================== */
+
+.o-media--xs {
+
+  > .o-media-figure {
+    margin-right: $spacing-smaller;
+  }
+
+  &.o-media--reverse {
+
+    > .o-media-figure {
+      margin-right: 0;
+      margin-left: $spacing-smaller;
+    }
+
+  }
+
+}
+
+.o-media--sm {
+
+  > .o-media-figure {
+    margin-right: $spacing-small;
+  }
+
+  &.o-media--reverse {
+
+    > .o-media-figure {
+      margin-right: 0;
+      margin-left: $spacing-small;
+    }
+
+  }
+
+}
+
+.o-media--lg {
+
+  > .o-media-figure {
+    margin-right: $spacing-large;
+  }
+
+  &.o-media--reverse {
+
+    > .o-media-figure {
+      margin-right: 0;
+      margin-left: $spacing-large;
+    }
+
+  }
+
+}
+
+.o-media--xl {
+
+  > .o-media-figure {
+    margin-right: $spacing-larger;
+  }
+
+  &.o-media--reverse {
+
+    > .o-media-figure {
+      margin-right: 0;
+      margin-left: $spacing-larger;
+    }
+
+  }
+
+}
+
+.o-media--flush {
+
+  > .o-media-figure {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+}
+
+/* Reversed flag.
+   ========================================================================== */
+
+.o-media--reverse {
+
+  > .o-media-figure {
+    order: 1;
+    margin-left: $spacing-base;
+    margin-right: 0;
+  }
+
+}
+
+/* Alignment variants.
+   ========================================================================== */
+
+.o-media--middle { align-items: center; }
+.o-media--bottom { align-items: flex-end; }
+
+
+@include breakpointDown(small) {
+  .o-media--responsive {
+    flex-direction: column;
+
+    .o-media-figure {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: $spacing-base;
+    }
+
+  }
+
+}
+
+/* ==========================================================================
+   Float based media object
+   ========================================================================== */
+
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ */
+
+// .o-media {
+//   @include clearfix();
+//   display: block;
+// }
+//
+// .o-media-figure {
+//   float: left;
+//   margin-right: $spacing-base;
+//
+//   > img {
+//     display: block;
+//   }
+//
+// }
+//
+// .o-media-body {
+//   overflow: hidden;
+//   display: block;
+//
+//   &,
+//   > :last-child {
+//     margin-bottom: 0;
+//   }
+//
+// }

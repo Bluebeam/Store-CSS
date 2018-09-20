@@ -1,0 +1,15 @@
+/* ==========================================================================
+ * #LINE-HEIGHT
+ * --------------------------------------------------------------------------
+ * Mixin to generate a no unit line height..
+ * ========================================================================== */
+
+/**
+ * Usage:
+ *   line-height: lineHeight(30px);
+ */
+
+@function lineHeight($lineHeight: $lineHeight-base, $baseFontSize: $fontSize-base) {
+  @return ($lineHeight / $baseFontSize);
+  // @return ceil($fontSize / $lineHeight-base) * ($lineHeight-base / $fontSize);
+}

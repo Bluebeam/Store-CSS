@@ -1,0 +1,387 @@
+/* ==========================================================================
+ * Button
+ * -----------------------------------------------------------------------------
+ * The button classes are best applied to links and buttons.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI of the website.
+ * ========================================================================== */
+
+/*
+   Settings
+   ========================================================================== */
+
+$bgColor--button: $color-black3;
+$bgColorHover--button: $color-black10;
+$color--button: inherit;
+
+$borderColor--button: darken($bgColor--button, 20%);
+$borderWidth--button: 1px;
+$borderStyle--button: solid;
+$borderRadius--button: $borderRadius-base;
+
+// $padding-xs--button: em(4px) em(14px);
+// $padding-sm--button: em(8px) em(16px);
+// $padding--button: em(12px) em(24px);
+// $padding-lg--button: em(16px) em(30px);
+// $padding-xl--button: em(20px) em(30px);
+
+$padding-xs--button: em(10px);
+$padding-sm--button: em(10px) em(14px);
+$padding--button: em(13px) em(16px);
+$padding-lg--button: em(16px) em(20px);
+$padding-xl--button: em(20px) em(24px);
+
+/*
+   Core styles
+   ========================================================================== */
+
+.button {
+  background-color: $bgColor--button;
+  border: $borderWidth--button $borderStyle--button $borderColor--button;
+  border-radius: $borderRadius-base;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  // line-height: normal;
+  margin: 0;
+  padding: $padding--button;
+  position: relative;
+  text-align: center;
+  // text-transform: capitalize;
+  text-decoration: none;
+  font: inherit;
+  font-family: $fontFamily-roboto;
+  font-size: em($fontSize-small);
+  font-weight: $fontWeight-bold;
+  line-height: $lineHeight-tightest;
+  letter-spacing: $letterSpacing-loose;
+  transition: $transition-allFaster;
+  appearance: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  // text-transform: uppercase;
+  transform: translateZ(0);
+  // box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+  &:-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  &:hover,
+  // &:focus,
+  &:active,
+  &.is-active {
+    text-decoration: none;
+    background-color: $bgColorHover--button;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: .6;
+    color: $color-grayDark;
+    border-color: $color-grayDark;
+    background-color: $color-grayLight;
+
+    &:hover {
+      color: $color-grayDark;
+      transform: translateY(0) !important;
+      box-shadow: none !important;
+      background-color: $color-grayLight;
+      border-color: $color-grayDark;
+    }
+  }
+
+  // fix button icon alignment
+  .icon {
+    top: -1px;
+    position: relative;
+    line-height: inherit;
+    vertical-align: middle;
+  }
+}
+
+/*
+   Size modifiers
+   ========================================================================== */
+
+/**
+ * These extend the core `button` class. They must be used *with* the `button` class.
+ * Example: <a class="button  button--xs" href="#">click here</a>
+ */
+
+.button--xs {
+  font-size: 72%;
+  padding: $padding-xs--button;
+}
+
+.button--sm {
+  font-size: 90%;
+  padding: $padding-sm--button;
+}
+
+.button--lg {
+  font-size: 110%;
+  padding: $padding-lg--button;
+}
+
+.button--xl {
+  font-size: 130%;
+  padding: $padding-xl--button;
+}
+
+/*
+   Button icons
+   ========================================================================== */
+
+// .button--iconOnly { line-height: normal; }
+//
+// .button-icon {
+//   display: inline-block;
+//   // vertical-align: middle;
+//   padding-left: rem($spacing-smaller);
+// }
+//
+// .button-icon--angleRight:before,
+// .button-icon--angleRightCircle:before { content: "\276F"; }
+
+// .actionIcon--angleLeft:before { content: "\276E"; }
+
+/*
+   Color modifiers
+   ========================================================================== */
+
+.button--primary {
+  @include buttonVariant(
+    $color-primary,
+    $color-primary,
+    $color-white,
+    $color-primaryDark,
+    $color-primaryDark
+  );
+}
+
+.button--secondary {
+  @include buttonVariant(
+    $color-secondary,
+    $color-secondary,
+    $color-white,
+    $color-secondaryDark,
+    $color-secondaryDark
+  );
+}
+
+.button--altDark,
+.button--alt {
+  @include buttonVariant(
+    $color-black70,
+    $color-black70,
+    $color-white,
+
+    $color-black90,
+    $color-black90,
+    $color-white
+  );
+}
+
+// .button--altLight {
+//   @include buttonVariant(
+//     $color-black10,
+//     $color-black20,
+//     $color-black70,
+//
+//     $color-black20,
+//     $color-black30,
+//     $color-black70
+//   );
+// }
+
+.button--link {
+  @include buttonVariant(
+    transparent,
+    transparent,
+    $color-link,
+    transparent,
+    transparent,
+    $color-linkHover
+  );
+  background: transparent !important;
+}
+
+/*
+   Social Buttons
+   ========================================================================== */
+
+// .button--facebook,
+// .button--twitter,
+// .button--youtube,
+// .button--linkedin,
+// .button--instagram,
+.button--social {
+  color: $color-white !important;
+  background-color: $color-grayDark;
+  border: 0;
+
+  // svg {
+  //   fill: $color-white;
+  //   display: block;
+  // }
+
+  .icon {
+    width: 18px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: $boxShadow-2;
+  }
+}
+
+.button--facebook:hover {
+  background-color: $color-facebook;
+  // border-color: $color-facebook;
+}
+
+.button--twitter:hover {
+  background-color: $color-twitter;
+  // border-color: $color-twitter;
+}
+
+.button--youtube:hover {
+  background-color: $color-youtube;
+  // border-color: $color-youtube;
+}
+
+.button--linkedin:hover {
+  background-color: $color-linkedin;
+  // border-color: $color-linkedin;
+}
+
+.button--instagram:hover {
+  background-color: $color-instagram;
+  // border-color: $color-instagram;
+}
+
+/*
+   Button Groups and Toggle Buttons
+   ========================================================================== */
+
+// Make the div behave like a button
+.buttonGroup {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+
+  > .button {
+    position: relative;
+    flex: 0 1 auto;
+
+    &:focus,
+    &:active,
+    &:hover,
+    &.is-active {
+      z-index: 1;
+    }
+  }
+
+  // Prevent double borders when buttons are next to each other
+  .button + .button,
+  .button + .buttonGroup,
+  .buttonGroup + .button,
+  .buttonGroup + .buttonGroup {
+    margin-left: -1px;
+  }
+}
+
+.buttonGroup > .button:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+  border-radius: 0;
+}
+
+.buttonGroup > .button:first-child {
+  margin-left: 0;
+}
+
+.buttonGroup > .button:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.buttonGroup > .button:last-child:not(:first-child),
+.buttonGroup > .dropdown-toggle:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.buttonGroup > .buttonGroup {
+  float: left;
+}
+
+.buttonGroup > .buttonGroup:not(:first-child):not(:last-child) > .button {
+  border-radius: 0;
+}
+
+.buttonGroup > .buttonGroup:first-child:not(:last-child) > .button:last-child,
+.buttonGroup > .buttonGroup:first-child:not(:last-child) > .dropdown-toggle {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.buttonGroup > .buttonGroup:last-child:not(:first-child) > .button:first-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+// Checkbox and radio options
+//
+// In order to support the browser's form validation feedback, powered by the
+// `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
+// `display: none;` or `visibility: hidden;` as that also hides the popover.
+// Simply visually hiding the inputs via `opacity` would leave them clickable in
+// certain cases which is prevented by using `clip` and `pointer-events`.
+// This way, we ensure a DOM element is visible to position the popover from.
+//
+// See https://github.com/twbs/bootstrap/pull/12794 and
+// https://github.com/twbs/bootstrap/pull/14559 for more information.
+
+.buttonGroup {
+  > .button,
+  > .buttonGroup > .button {
+    margin-bottom: 0; // Override default `<label>` value
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+      pointer-events: none;
+    }
+
+    &:active, &:hover {
+      transform: scale(0), translateY(0) !important;
+      box-shadow: none;
+    }
+
+  }
+}
+
+// Border colors
+
+.buttonGroup {
+  .button--primary {
+    border-color: darken($color-primary, 10%);
+  }
+
+  .button--secondary {
+    border-color: darken($color-secondary, 10%);
+  }
+
+  .button--altDark,
+  .button--alt {
+    border-color: darken($color-black70, 20%);
+  }
+}

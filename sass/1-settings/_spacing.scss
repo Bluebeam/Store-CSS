@@ -1,0 +1,50 @@
+/* ==========================================================================
+ * #SPACING
+ * --------------------------------------------------------------------------
+ * Global spacing units used to add space between UI elements.
+ *
+ * Usage scale:
+ *
+ * *-micro
+ * *-smallest
+ * *-smaller
+ * *-small
+ * *-base
+ * *-large
+ * *-larger
+ * *-largest
+ * *-jumbo
+ * ========================================================================== */
+
+$spacing-base: 20px !default;
+
+$spacing-small: ($spacing-base / 2) !default; // 10px
+$spacing-smaller: ($spacing-base - 15) !default; // 5px
+$spacing-smallest: 2px !default;
+
+$spacing-large: ($spacing-base + 10) !default; // 30px
+$spacing-larger: ($spacing-base * 2) !default; // 40px
+$spacing-largest: ($spacing-base + 30) !default; // 50px
+$spacing-huge: ($spacing-base + 40) !default; // 60px
+
+
+
+
+
+// ==========================================================================
+// FOR TESTING DO NOT USE
+// ==========================================================================
+// $spacing-0: 0;
+// $spacing-1: 4px;
+// $spacing-2: 8px;
+// $spacing-3: 12px;
+// $spacing-4: 16px;
+// $spacing-5: 20px;
+// $spacing-5: 24px;
+// $spacing-6: 28px;
+// $spacing-7: 32px;
+// $spacing-8: 36px;
+// $spacing-9: 40px;
+// $spacing-10: 44px;
+// $spacing-11: 48px;
+// $spacing-12: 50px;

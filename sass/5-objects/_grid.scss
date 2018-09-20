@@ -1,0 +1,197 @@
+/* ==========================================================================
+ * #GRID-FLEX
+ * --------------------------------------------------------------------------
+ * A responsive grid system based on Flexbox.
+ * ========================================================================== */
+
+/**
+ * Core grid component
+ *
+ * DO NOT apply dimension or offset utilities to the `o-grid` element. All cell
+ * widths and offsets should be applied to child grid columns.
+ */
+
+/* Grid container
+   ========================================================================== */
+
+/**
+ * All content must be contained within child `o-grid-cell` elements.
+ *
+ * 1. Account for browser defaults of elements that might be the root node of
+ *    the component.
+ */
+
+.o-grid {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1200px;
+
+  // Add grid gutters by default.
+  > .o-grid-cell {
+    padding: 0 calc(.5 * 20px);
+  }
+
+  .o-grid {
+    // width: 100%;
+    margin-left: calc(-.5 * 20px);
+    margin-right: calc(-.5 * 20px);
+  }
+}
+
+/**
+ * Modifier: Make grid span the width of the browser window.
+ */
+
+.o-grid--full {
+  max-width: 100%;
+}
+
+/**
+ * Modifier: center align all grid columns
+ */
+
+.o-grid--alignCenter {
+  justify-content: center;
+}
+
+/**
+ * Modifier: right align all grid columns
+ */
+
+.o-grid--alignRight {
+  justify-content: flex-end;
+}
+
+/**
+ * Modifier: left align all grid columns
+ */
+
+.o-grid--alignLeft {
+  justify-content: flex-start;
+}
+
+/**
+ * Modifier: middle-align grid columns
+ */
+
+.o-grid--alignTop {
+  align-items: flex-start;
+}
+
+/**
+ * Modifier: middle-align grid columns
+ */
+
+.o-grid--alignMiddle {
+  align-items: center;
+}
+
+/**
+ * Modifier: bottom-align grid columns
+ */
+
+.o-grid--alignBottom {
+  align-items: flex-end;
+}
+
+/**
+ * Modifier: allow columns to equally distribute width.
+ *
+ * 1. Provide all values to avoid IE10 bug with shorthand flex
+ *    http://git.io/vllC7
+ *
+ *    Use `0%` to avoid bug in IE10/11 with unitless flex basis
+ *    http://git.io/vllWx
+ */
+
+.o-grid--autoFit > .o-grid-cell {
+  flex: 1 1 0%; /* 1 */
+}
+
+@include breakpointUp(small) {
+  .o-sm-grid--autoFit > .o-grid-cell {
+    flex: 1 1 0%; /* 1 */
+  }
+}
+
+@include breakpointUp(medium) {
+  .o-md-grid--autoFit > .o-grid-cell {
+    flex: 1 1 0%; /* 1 */
+  }
+}
+
+@include breakpointUp(large) {
+  .o-lg-grid--autoFit > .o-grid-cell {
+    flex: 1 1 0%; /* 1 */
+  }
+}
+
+/**
+ * Modifier: all columns match height of tallest cell in a row.
+ */
+
+.o-grid--equalHeight > .o-grid-cell {
+  display: flex;
+}
+
+/**
+ * Modifier: Remove gutters in the grid columns.
+ */
+
+.o-grid--noGutter {
+  padding: 0;
+}
+
+.o-grid--noGutter > .o-grid-cell {
+  padding: 0;
+}
+
+/* Grid cell
+   ========================================================================== */
+
+/**
+ * No explicit width by default. Rely on combining `o-grid-cell` with a dimension
+ * utility or a component class that extends 'o-grid'.
+ *
+ * 1. Set flex items to full width by default
+ * 2. Fix issue where elements with overflow extend past the
+ *    `Grid-cell` container - https://git.io/vw5oF
+ */
+
+.o-grid-cell {
+  box-sizing: inherit;
+  flex-basis: 100%; /* 1 */
+  min-width: 0; /* 2 */
+
+  // > .o-grid {
+  //   margin-left: calc(-.5 * 20px);
+  //   margin-right: calc(-.5 * 20px);
+  // }
+}
+
+
+
+.o-grid-cell--top {
+  align-self: flex-start;
+}
+
+.o-grid-cell--bottom {
+  align-self: flex-end;
+}
+
+.o-grid-cell--middle {
+  align-self: center;
+}
+
+/**
+ * Modifier: horizontally center one unit
+ * Set a specific unit to be horizontally centered. Doesn't affect
+ * any other units. Can still contain a child `Grid` object.
+ */
+
+.o-grid-cell--center {
+  margin: 0 auto;
+}

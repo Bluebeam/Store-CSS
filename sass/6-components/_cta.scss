@@ -1,0 +1,23 @@
+.cta {
+  @include rem(font-size, $fontSize-small);
+}
+
+.cta:after {
+  @include rem(font-size, 20px);
+
+  font-family: "bluebeam-icons" !important;
+  vertical-align: middle;
+  line-height: 1;
+  content: "\e900";
+  display: inline-block;
+  margin-left: rem($spacing-smaller);
+  position: relative;
+  // top: -1px;
+  transition: margin-left $animSpeed-faster ease-out;
+}
+
+.cta:hover {
+  &:after {
+    margin-left: rem($spacing-small);
+  }
+}

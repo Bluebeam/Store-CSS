@@ -1,0 +1,76 @@
+/**
+ * Horizontal rules, extend `hr`.
+ *
+ * Example:
+ *
+<hr class="rule">
+ *
+ * Change the color and/or width of a rule with a utility classes:
+ *
+<hr class="rule  u-colorGrayDark  u-border3">
+ *
+ */
+
+hr,
+.rule {
+  @include rem(margin-bottom, $spacing-base);
+
+  color: $color-grayLight;
+  border: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  // margin-bottom: (($spacing-base - 1px) / $fontSize-base) * 1rem;
+}
+
+/**
+ * Modifier: Dotted rules. Extends `.rule`
+ *
+<hr class="rule  rule--dotted">
+ *
+ */
+
+// .rule--dotted {
+//   border-bottom-style: dotted;
+// }
+
+
+/**
+ * Modifier: Dashed rules. Extends `.rule`
+ *
+<hr class="rule  rule--dashed">
+ */
+
+// .rule--dashed {
+//   border-bottom-style: dashed;
+// }
+
+
+/**
+ * Ornamental rules. Places a § over the rule. Extends `.rule`
+ *
+<hr class="rule  rule--ornament">
+ */
+
+// .rule--ornament {
+//   position: relative;
+//
+//   &:after {
+//     content: "\00A7";
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     line-height: 0;
+//     text-align: center;
+//   }
+//
+//   /**
+//   * Pass in an arbitrary ornament though a data attribute, e.g.:
+//   *
+//     <hr class="rule  rule--ornament" data-ornament="!">
+//   *
+//   */
+//   &[data-ornament]:after {
+//     content: attr(data-ornament);
+//   }
+// }

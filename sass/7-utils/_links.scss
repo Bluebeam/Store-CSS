@@ -1,0 +1,41 @@
+/* ==========================================================================
+ * #LINKS
+ * --------------------------------------------------------------------------
+ * Link utilities
+ * ========================================================================== */
+
+.u-linkLightest {
+  color: $color-grayLightest;
+
+  &:hover { color: darken($color-grayLightest, 12%); }
+}
+
+.u-linkLighter {
+  color: $color-grayLighter;
+
+  &:hover { color: darken($color-grayLighter, 12%); }
+}
+
+.u-linkLight {
+  color: $color-grayLight;
+
+  &:hover { color: darken($color-grayLight, 12%); }
+}
+
+.u-linkDark {
+  color: $color-grayDark;
+
+  &:hover { color: lighten($color-grayDark, 12%); }
+}
+
+.u-linkDarker {
+  color: $color-grayDarker;
+
+  &:hover { color: lighten($color-grayDarker, 12%); }
+}
+
+.u-linkDarkest {
+  color: $color-grayDarkest;
+
+  &:hover { color: lighten($color-grayDarkest, 12%); }
+}

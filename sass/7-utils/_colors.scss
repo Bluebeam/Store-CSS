@@ -1,0 +1,145 @@
+/* ==========================================================================
+ * #COLORS
+ * --------------------------------------------------------------------------
+ * Color utilities. Use them to add/modify background and text colors.
+ * ========================================================================== */
+
+/*
+   Brand Colors
+   ========================================================================== */
+
+.u-colorPrimary { color: $color-primary !important; }
+.u-colorPrimaryLight { color: $color-primaryLight !important; }
+.u-colorPrimaryDark { color: $color-primaryDark !important; }
+
+.u-bgPrimary { background-color: $color-primary !important; }
+.u-bgPrimaryLight { background-color: $color-primaryLight !important; }
+.u-bgPrimaryDark { background-color: $color-primaryDark !important; }
+
+.u-colorSecondary { color: $color-secondary !important; }
+.u-colorSecondaryLight { color: $color-secondaryLight !important; }
+.u-colorSecondaryDark { color: $color-secondaryDark !important; }
+
+.u-bgSecondary { background-color: $color-secondary !important; }
+.u-bgSecondaryLight { background-color: $color-secondaryLight !important; }
+.u-bgSecondaryDark { background-color: $color-secondaryDark !important; }
+
+.u-fillPrimary { fill: $color-primary !important; }
+.u-fillPrimaryLight { fill: $color-primaryLight !important; }
+.u-fillPrimaryDark { fill: $color-primaryDark !important; }
+
+.u-fillPrimary { fill: $color-primary !important; }
+.u-fillPrimaryLight { fill: $color-primaryLight !important; }
+.u-fillPrimaryDark { fill: $color-primaryDark !important; }
+
+.u-fillSecondary { fill: $color-secondary !important; }
+.u-fillSecondaryLight { fill: $color-secondaryLight !important; }
+.u-fillSecondaryDark { fill: $color-secondaryDark !important; }
+
+.u-fillSecondary { fill: $color-secondary !important; }
+.u-fillSecondaryLight { fill: $color-secondaryLight !important; }
+.u-fillSecondaryDark { fill: $color-secondaryDark !important; }
+
+/*
+   Brand Accent Colors - Blue and Purple
+   ========================================================================== */
+
+.u-colorAccentPurple { color: $color-accent-purple !important; }
+.u-bgAccentPurple { background-color: $color-accent-purple !important; }
+
+.u-bgBlue1 { background-color: $color-blue1 !important; }
+.u-colorBlue1 { color: $color-blue1 !important; }
+.u-bgBlue2 { background-color: $color-blue2 !important; }
+.u-colorBlue2 { color: $color-blue2 !important; }
+.u-bgBlue3 { background-color: $color-blue3 !important; }
+.u-colorBlue3 { color: $color-blue3 !important; }
+.u-bgBlue4 { background-color: $color-blue4 !important; }
+.u-colorBlue4 { color: $color-blue4 !important; }
+.u-bgBlue5 { background-color: $color-blue5 !important; }
+.u-colorBlue5 { color: $color-blue5 !important; }
+.u-bgBlue6 { background-color: $color-blue6 !important; }
+.u-colorBlue6 { color: $color-blue6 !important; }
+.u-bgBlue7 { background-color: $color-blue7 !important; }
+.u-colorBlue7 { color: $color-blue7 !important; }
+.u-bgBlue8 { background-color: $color-blue8 !important; }
+.u-colorBlue8 { color: $color-blue8 !important; }
+.u-bgBlue9 { background-color: $color-blue9 !important; }
+.u-colorBlue9 { color: $color-blue9 !important; }
+.u-bgBlue10 { background-color: $color-blue10 !important; }
+.u-colorBlue10 { color: $color-blue10 !important; }
+.u-bgBlue11 { background-color: $color-blue11 !important; }
+.u-colorBlue11 { color: $color-blue11 !important; }
+
+/*
+   Grayscale
+   ========================================================================== */
+
+.u-colorWhite { color: $color-white !important; }
+.u-colorBlack { color: $color-black !important; }
+.u-bgWhite, .u-hoverBgWhite { background-color: $color-white !important; }
+.u-bgBlack { background-color: $color-black !important; }
+
+.u-colorGray { color: $color-gray !important; }
+.u-colorGrayLightest { color: $color-grayLightest !important; }
+.u-colorGrayLighter { color: $color-grayLighter !important; }
+.u-colorGrayLight { color: $color-grayLight !important; }
+.u-colorGrayDark { color: $color-grayDark !important; }
+.u-colorGrayDarker { color: $color-grayDarker !important; }
+.u-colorGrayDarkest { color: $color-grayDarkest !important; }
+.u-colorBlackish { color: $color-blackish !important; }
+
+.u-bgGray { background-color: $color-gray !important; }
+.u-bgGrayLightest { background-color: $color-grayLightest !important; }
+.u-bgGrayLighter { background-color: $color-grayLighter !important; }
+.u-bgGrayLight { background-color: $color-grayLight !important; }
+.u-bgGrayDark { background-color: $color-grayDark !important; }
+.u-bgGrayDarker { background-color: $color-grayDarker !important; }
+.u-bgGrayDarkest { background-color: $color-grayDarkest !important; }
+.u-bgBlackish { background-color: $color-blackish !important; }
+
+.u-fillBlack { fill: $color-black !important; }
+.u-fillWhite { fill: $color-white !important; }
+.u-fillGray { fill: $color-gray !important; }
+.u-fillGrayLightest { fill: $color-grayLightest !important; }
+.u-fillGrayLighter { fill: $color-grayLighter !important; }
+.u-fillGrayLight { fill: $color-grayLight !important; }
+.u-fillGrayDark { fill: $color-grayDark !important; }
+.u-fillGrayDarker { fill: $color-grayDarker !important; }
+.u-fillGrayDarkest { fill: $color-grayDarkest !important; }
+.u-fillBlackish { fill: $color-blackish !important; }
+
+/*
+   Social networking colors
+   ========================================================================== */
+
+// .u-colorTwitter { color: $color-twitter !important; }
+// .u-colorFacebook { color: $color-facebook !important; }
+// .u-colorYoutube { color: $color-youtube !important; }
+// .u-colorLinkedin { color: $color-linkedin !important; }
+// .u-colorInstagram { color: $color-instagram !important; }
+//
+// .u-bgTwitter { background-color: $color-twitter !important; }
+// .u-bgFacebook { background-color: $color-facebook !important; }
+// .u-bgYoutube { background-color: $color-youtube !important; }
+// .u-bgLinkedin { background-color: $color-linkedin !important; }
+// .u-bgInstagram { background-color: $color-instagram !important; }
+//
+// .u-fillTwitter { fill: $color-twitter !important; }
+// .u-fillFacebook { fill: $color-facebook !important; }
+// .u-fillYoutube { fill: $color-youtube !important; }
+// .u-fillLinkedin { fill: $color-linkedin !important; }
+// .u-fillInstagram { fill: $color-instagram !important; }
+
+/*
+   Status colors
+   ========================================================================== */
+
+.u-colorSuccess { color: $color-success !important; }
+// .u-colorInfo { color: $color-info !important; }
+// .u-colorWarning { color: $color-warning !important; }
+.u-colorError { color: $color-error !important; }
+
+.u-bgSuccess { background-color: $color-success !important; }
+// .u-bgInfo { background-color: $color-info !important; }
+// .u-bgWarning { background-color: $color-warning !important; }
+.u-bgError { background-color: $color-error !important; }

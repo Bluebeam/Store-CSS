@@ -1,0 +1,175 @@
+/* ==========================================================================
+ * #HOVERS
+ * --------------------------------------------------------------------------
+ * Various hover effects
+ * ========================================================================== */
+
+/**
+ * Dim element on hover by adding the `u-hoverDim` class.
+ */
+
+.u-hoverDim {
+  opacity: 1;
+  transition: $transition-opacityFaster;
+}
+
+.u-hoverDim:hover,
+.u-hoverDim:focus {
+  opacity: .5;
+  transition: $transition-opacityFaster;
+}
+
+.u-hoverDim:active {
+  opacity: .8;
+  transition: opacity $animSpeed-faster ease-out;
+}
+
+/**
+ * Animate opacity to 100% on hover by adding the `u-hoverGlow` class.
+ */
+
+.u-hoverGlow {
+  transition: $transition-opacityFaster;
+}
+
+.u-hoverGlow:hover,
+.u-hoverGlow:focus {
+  opacity: 1;
+  transition: $transition-opacityFaster;
+}
+
+/**
+ * Hide child & reveal on hover:
+ *
+ * Put the hide-child class on a parent element and any nested element with the
+     child class will be hidden and displayed on hover or focus.
+ */
+
+// .hide-child .child {
+//   opacity: 0;
+//   transition: $transition-opacityFaster;
+// }
+//
+// .hide-child:hover  .child,
+// .hide-child:focus  .child,
+// .hide-child:active .child {
+//   opacity: 1;
+//   transition: $transition-opacityFaster;
+// }
+//
+// .underline-hover:hover,
+// .underline-hover:focus {
+//   text-decoration: underline;
+// }
+
+/**
+ * Can combine this with overflow-hidden to make background images u-hoverGrow
+ * on hover even if you are using background-size: cover
+ */
+
+.u-hoverGrow,
+.u-hoverGrowLarge {
+  -moz-osx-font-smoothing: grayscale;
+  filter: blur(0);
+  // backface-visibility: hidden;
+  // transform: translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  transition: transform 200ms ease-in-out;
+}
+
+.u-hoverGrow:hover,
+.u-hoverGrow:focus {
+  transform: scale(1.05);
+  // zoom: 105%;
+}
+
+.u-hoverGrow:active {
+  transform: scale(1);
+}
+
+// .u-hoverGrowLarge {
+//   -moz-osx-font-smoothing: grayscale;
+//   backface-visibility: hidden;
+//   transform: translateZ(0);
+//   transition: transform .25s ease-in-out;
+// }
+
+.u-hoverGrowLarge:hover,
+.u-hoverGrowLarge:focus {
+  transform: scale(1.2);
+}
+
+.u-hoverGrowLarge:active {
+  transform: scale(1);
+}
+
+/* Add pointer on hover */
+
+// .pointer:hover {
+//   cursor: pointer;
+// }
+
+/**
+ * Add shadow on hover.
+ * Via: http://tobiasahlin.com/blog/how-to-animate-box-shadow/
+ */
+
+.u-hoverShadow1,
+.u-hoverShadow2,
+.u-hoverShadow3,
+.u-hoverShadow4,
+.u-hoverShadow5 {
+  cursor: pointer;
+  position: relative;
+  transition: all .5s cubic-bezier(.165, .84, .44, 1);
+
+  &::after {
+    content: "";
+    // box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, .2);
+    // box-shadow: $boxShadow-5;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // z-index: -1;
+    transition: opacity .5s cubic-bezier(.165, .84, .44, 1);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+    // z-index: auto;
+  }
+}
+
+.u-hoverShadow1 {
+  &::after {
+    box-shadow: $boxShadow-1;
+  }
+}
+
+.u-hoverShadow2 {
+  &::after {
+    box-shadow: $boxShadow-2;
+  }
+}
+
+.u-hoverShadow3 {
+  &::after {
+    box-shadow: $boxShadow-3;
+  }
+}
+
+.u-hoverShadow4 {
+  &::after {
+    box-shadow: $boxShadow-4;
+  }
+}
+
+.u-hoverShadow5 {
+  &::after {
+    box-shadow: $boxShadow-5;
+  }
+}
